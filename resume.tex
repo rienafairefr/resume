@@ -4,6 +4,11 @@
 \usepackage{graphicx}
 %----------------------------------------------------------------------------------------
 
+
+\setlength{\parskip}{0cm}
+\setlength{\parindent}{1em}
+
+
 \begin{document}
 
 \newif\ifen
@@ -44,7 +49,7 @@
 	% The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
 	% Other icons can be found by referring to fontawesome.pdf (supplied with the template) and using the word after \fa in the command for the icon you want
 	\icon{Github}{12}{\href{https://github.com/rienafairefr}{@rienafairefr}}\\
-	\icon{Twitter}{12}{\href{https://twitter.com/@rienafairefr}{@rienafairefr}}\\
+	\icon{Twitter}{12}{\href{https://twitter.com/m_berthome}{@m\_berthome}}\\
 	\icon{Linkedin}{12}{\href{https://www.linkedin.com/in/matthieu-berthomé}{@matthieu-berthomé}}
 \end{minipage}
 
@@ -72,6 +77,19 @@
 %	EXPERIENCE
 %----------------------------------------------------------------------------------------
 
+\newcommand{\sfebruary}{%
+  \en{Feb.}%
+  \fr{Fév.}%
+}
+\newcommand{\february}{%
+  \en{February}%
+  \fr{Février}%
+}
+\newcommand{\september}{%
+  \en{September}%
+  \fr{Septembre}%
+}
+\newcommand{\sseptember}{Sept.}
 \newcommand{\june}{%
   \en{June}%
   \fr{Juin}%
@@ -87,30 +105,37 @@
 \cvsect{\en{Experience}\fr{Expérience}}
 
 \begin{entrylist}
+    \entry
+		{\sseptember{} 2019 -- \\\sfebruary{} 2020}
+		{\en{Startup founder}\fr{Porteur de projet startup}}
+		{INRIA, Euratechnologies \href{https://www.inria.fr/centre/lille}{\logo{INRIA.eps}}}
+		{
+		    \href{https://www.whisbee.eu}{\logo{whisbee.png}} Whisbee, \fr{le connecteur pour vos données bancaires}%
+		    \en{connector for your banking data}\\
+			Business dev, code: Budget Insight, Auth0, APIs, devOps, backend, frontend
+		}
 	\entry
 		{\june{} 2017 -- }
 		{\en{Full-stack developer}\fr{Ingénieur full-stack}}
 		{INRIA, \en{Lille campus}\fr{Villeneuve d'Ascq} \href{https://www.inria.fr/centre/lille}{\logo{INRIA.eps}}}
 		{
-			\en{Sysadmin, backend, frontend \& Embedded code}
+			\en{Sysadmin, backend, frontend \& embedded}
 			\fr{Développement serveur, frontend \& embarqué} \href{https://www.iot-lab.info}{\logo{fit-iotlab.png}}
 		}
 	\entry
-		{\april{} 2017 -- \\\footnotesize{freelance}}
-		{\en{Electronics \& Laser cutting instructor}\fr{Formateur électronique et découpe laser}}
+		{\april{} 2017 -- }
+		{\en{Freelance Electronics \& Laser cutting instructor}\fr{Formateur électronique et découpe laser en freelance}}
 		{Techshop Lille \href{https://www.techshoplm.fr/le-lieu-lille}{\logo{Techshop.png}}}
-		{\en{Training on the electronics \& laser cutting capabilities}
-		 \fr{Formations aux capacités électronique et découpe laser}}
+
 	\entry
 		{2014 -- 2017}
-		{\en{Microelectronics Laser cutting research engineer}\fr{Ingénieur de recherche découpe laser pour la microélectronique}}
+		{\en{Research engineer}\fr{Ingénieur de recherche}}
 		{IEMN \en{Lille campus}\fr{Villeneuve d'Ascq} \href{https://www.iemn.fr/la-recherche/les-groupes/microelecsi}{\logo{CNRS.jpg}}}
-		{\en{Maintenance, execution of cutting jobs, development of interface software}\fr{Maintenance, exécution de jobs de découpe, développement d'interface logicielle}\\ C\#, Visual Basic, WPF, Real-time software}
+		{\en{Maintenance, execution of cutting jobs, development of interface software}\fr{Maintenance, exécution de jobs de découpe, développement d'interface logicielle}}
 	\entry
 		{2010 -- 2013}
 		{\en{Research Assistant}\fr{Assistant-doctorant}}
-		{CEA-LETI Grenoble \href{www.leti-cea.fr/}{\logo{CEA-LETI.png}} EPFL Lausanne  \href{https://nanolab.epfl.ch/}{\logo{EPFL.jpg}} \\
-		\footnotesize{\en{co-supervision}\fr{co-tutelle}}}
+		{CEA-LETI Grenoble \href{www.leti-cea.fr/}{\logo{CEA-LETI.png}} EPFL Lausanne  \href{https://nanolab.epfl.ch/}{\logo{EPFL.jpg}}}
 		{\en{Research in micro-nano electronics }\fr{Recherche en micro-nano électronique}}
 \end{entrylist}
 
@@ -121,14 +146,6 @@
 \cvsect{\en{education}\fr{éducation}}
 
 \begin{entrylist}
-	\entry
-		{2010 -- 2013}
-		{\en{EDMI Doctoral courses}\fr{Ecole doctorale EDMI}}
-		{EPFL Lausanne \href{https://www.epfl.ch/education/phd/programs/edmi-microsystems-and-microelectronics/}{\logo{EPFL.jpg}}}
-		{%
-			\en{Microsystems, Microelectronics}%
-			\fr{Micro-systèmes, Micro-électronique}%
-		}%
 	\entry
 		{2009}
 		{%
@@ -145,9 +162,31 @@
 		{\en{Full-year exchange}\fr{un an en échange}}
 		{UCSD San Diego \href{https://ucsd.edu/}{\logo{UCSD.png}}}
 		{%
-			\en{Full-time coursework\\6 months project on a plasmonic metamaterial}%
-			\fr{Cours à temps plein\\projet de fin d'études sur un métamatériau plasmonique}%
 		}%
+\end{entrylist}
+
+\cvsect{\en{Technologies}\fr{technologies}}
+
+\begin{entrylist}
+    \tableentry{Python}{Flask, SQLAlchemy}%
+    \tableentry
+        {Java}
+        {%
+            \en{Modified \& maintained API services\\Minecraft modding}%
+            \fr{Modifié et maintenu des services API\\Création de mods Minecraft}%
+        }%
+    \tableentry
+        {sysadmin}
+        {%
+            \en{Deployed \& installed various Linux servers, both at work \& personal}%
+            \fr{Déployé et installé des serveurs Linux, serveur pro \& familial (NextCloud)}%
+        }%
+    \tableentry
+        {devOps}
+        {%
+            \en{Good knowledge of Docker, IaC. Interested in k8s}%
+            \fr{bonne connaissance de Docker, IaC, intéressé par k8s}
+        }%
 \end{entrylist}
 
 \cvsect{\en{Open-source}\fr{open-source}}
@@ -155,10 +194,10 @@
 \begin{entrylist}
 	\tableentry
 		{\href{https://github.com/rienafairefr/pyynab}{pyYNAB}}
-		{
+		{%
 			\en{Reverse-engineered library for the API of www.youneedabudget.com, a personal finance web-app}%
 			\fr{Reverse-ingéniérie de l'API de www.youneedabudget.com, un site de budget personnel}%
-		}
+		}%
 	\tableentry
 		{\href{https://github.com/rienafairefr/pyrebrickable}{pyrebrickable}}
 		{%
@@ -170,7 +209,7 @@
 			\en{Various contributions}%
 			\fr{Contributions\\ diverses}
 		}%
-		{
+		{%
 			\en{FlatCAM, a PCB milling application\\OpenAPI-generator, a code generator from OpenAPI specifications}%
 			\fr{FlatCAM, logiciel de gravure PCB\\OpenAPI-generator, générateur de code depuis des spécifications OpenAPI}%
 		}%
