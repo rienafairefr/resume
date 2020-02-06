@@ -2,3 +2,8 @@
 *-converted-to.pdf
 \.idea
 infox.tex
+*.log
+*.out
+*.text.pdf
+
+infos\.tex
