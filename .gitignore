@@ -1,0 +1,4 @@
+*.aux
+*-converted-to.pdf
+\.idea
+infox.tex
