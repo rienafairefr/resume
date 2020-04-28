@@ -1,0 +1,304 @@
+{
+  "basics": {
+    "name": "Matthieu Berthomé",
+    "picture": "https://avatars2.githubusercontent.com/u/758517?v=4",
+    "label": "",
+    "headline": "",
+    "summary": "Multi-faceted Engineer, from the electrons to the Cloud <i class=\"fa fa-heart\"></i> building projects, and helping others build their projects",
+    "website": null,
+    "blog": null,
+    "yearsOfExperience": null,
+    "id": "f4f1b8b0-a0d1-4de4-8d20-35cb012e53b2",
+    "email": "matthieu@mmea.fr",
+    "region": "LILLE",
+    "location": {},
+    "phone": "+33 6 09 63 43 87",
+    "profiles": [
+      {
+        "network": "gitconnected",
+        "username": "rienafairefr",
+        "url": "https://gitconnected.com/rienafairefr"
+      },
+      {
+        "network": "GitHub",
+        "username": "rienafairefr",
+        "url": "https://github.com/rienafairefr"
+      },
+      {
+        "network": "LinkedIn",
+        "url": "https://www.linkedin.com/in/matthieu-berthomé",
+        "username": "matthieu-berthomé"
+      },
+      {
+        "network": "Twitter",
+        "url": "https://twitter.com/m_berthome",
+        "username": "m_berthome"
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Python",
+      "level": "Advanced",
+      "rating": 4,
+      "yearsOfExperience": 5,
+      "keywords": []
+    },
+    {
+      "name": "Javascript",
+      "level": "Intermediate",
+      "rating": 3,
+      "yearsOfExperience": 2,
+      "keywords": []
+    },
+    {
+      "name": "Sysadmin & Devops",
+      "level": "Advanced",
+      "rating": 4,
+      "yearsOfExperience": 3,
+      "keywords": []
+    }
+  ],
+  "projects": [
+    {
+      "name": "pynynab",
+      "displayName": "pynYNAB",
+      "summary": "a python client for the new YNAB",
+      "website": "",
+      "githubUrl": "https://github.com/rienafairefr/pynYNAB",
+      "primaryLanguage": "JavaScript",
+      "languages": [
+        "JavaScript",
+        "Shell",
+        "Python",
+        "HTML"
+      ],
+      "libraries": [],
+      "images": [],
+      "videos": []
+    },
+    {
+      "name": "openapi-generator",
+      "displayName": "openapi-generator",
+      "summary": "OpenAPI Generator allows generation of API client libraries (SDK generation), server stubs, documentation and configuration automatically given an OpenAPI Spec (v2, v3)",
+      "website": "https://openapi-generator.tech",
+      "githubUrl": "https://github.com/OpenAPITools/openapi-generator",
+      "primaryLanguage": "Java",
+      "languages": [
+        "Dart",
+        "ActionScript",
+        "PHP",
+        "PowerShell",
+        "Ruby",
+        "Rust",
+        "CSS",
+        "JavaScript",
+        "C#",
+        "TypeScript",
+        "Kotlin",
+        "Dockerfile",
+        "Vue",
+        "Shell",
+        "Batchfile",
+        "Java",
+        "HTML",
+        "Scala",
+        "Apex"
+      ],
+      "libraries": [],
+      "images": [],
+      "videos": []
+    },
+    {
+      "name": "pulumi",
+      "displayName": "pulumi",
+      "summary": "Pulumi - Modern Infrastructure as Code. Any cloud, any language 🚀",
+      "website": "https://www.pulumi.com",
+      "githubUrl": "https://github.com/pulumi/pulumi",
+      "primaryLanguage": "Go",
+      "languages": [
+        "C#",
+        "Go",
+        "Makefile",
+        "TypeScript",
+        "Shell",
+        "Python",
+        "JavaScript",
+        "PowerShell",
+        "Batchfile",
+        "F#"
+      ],
+      "libraries": [],
+      "images": [],
+      "videos": []
+    },
+    {
+      "name": "cli-tools",
+      "displayName": "cli-tools",
+      "summary": "IoT-LAB CLI tools",
+      "website": "",
+      "githubUrl": "https://github.com/iot-lab/cli-tools",
+      "primaryLanguage": "Python",
+      "languages": [
+        "Python",
+        "Shell"
+      ],
+      "libraries": [],
+      "images": [],
+      "videos": []
+    }
+  ],
+  "work": [
+    {
+      "company": "Whisbee / Alfred",
+      "position": "Startup founder",
+      "website": "www.whisbee.eu",
+      "location": "LILLE",
+      "summary": "Connecting your banks to your life",
+      "isCurrentRole": true,
+      "startDate": "2019-06-01",
+      "endDate": "",
+      "start": {
+        "year": 2019,
+        "month": 6
+      },
+      "end": {},
+      "highlights": [
+        "Backend, frontend, bizdev"
+      ]
+    },
+    {
+      "company": "Freelance",
+      "position": "Instructor in Electronics & laser cutting",
+      "website": "",
+      "location": "LILLE",
+      "summary": "Course development, instruction of small groups in the manipulation & beecoming independent ",
+      "isCurrentRole": true,
+      "startDate": "2017-01-01",
+      "endDate": "",
+      "start": {
+        "year": 2017,
+        "month": 6
+      },
+      "end": {},
+      "highlights": [
+        "laser cutting machines (Trotec)",
+        "Electronics lab (soldering, PCB conception & '\n                   'fabrication)"
+      ]
+    },
+    {
+      "company": "INRIA",
+      "position": "Full Stack Developer",
+      "website": "www.inria.fr",
+      "location": "LILLE",
+      "summary": "Part of a remote team of 5 engineers at FIT Iot-LAB www.iot-lab.info",
+      "isCurrentRole": false,
+      "startDate": "2017-06-01",
+      "endDate": "2019-06-01",
+      "start": {
+        "year": 2017,
+        "month": 6
+      },
+      "end": {
+        "year": 2019,
+        "month": 6
+      },
+      "highlights": [
+        "Maintenance of the platform\\'s backend, frontend code, CLI-tools, APIs",
+        "Sysadmin. Deployments of servers",
+        "Managing of two successful internships"
+      ]
+    },
+    {
+      "company": "CNRS",
+      "position": "Development Engineer",
+      "website": "www.cnrs.fr",
+      "location": "LILLE",
+      "summary": "Maintenance, execution of laser micromachining jobs on a femtosecond laser.",
+      "isCurrentRole": false,
+      "startDate": "2014-06-01",
+      "endDate": "2017-01-01",
+      "start": {
+        "year": 2014,
+        "month": 6
+      },
+      "end": {
+        "year": 2017,
+        "month": 9
+      },
+      "highlights": [
+        "Development of interface software: WPF .NET UI, AlphaCAM postprocessor, G-code generation"
+      ]
+    },
+    {
+      "company": "CEA-LETI (Grenoble) & EPFL (Lausanne)",
+      "position": "Research Assistant",
+      "website": "",
+      "location": "Grenoble & Lausanne",
+      "summary": "Research in micro-nano electronics (new transistor structure)",
+      "isCurrentRole": false,
+      "startDate": "2010-01-01",
+      "endDate": "2013-07-01",
+      "start": {
+        "year": 2010,
+        "month": 1
+      },
+      "end": {
+        "year": 2013,
+        "month": 7
+      },
+      "highlights": [
+        "Developed tools for data collection & processing, instrumentation. Excel VBA, Matlab Scripts, Comsol physical simulations. Technology CAD (TCAD) software (Silvaco ATLAS)"
+      ]
+    }
+  ],
+  "publications": [],
+  "education": [
+    {
+      "institution": "INPG Phelma, Grenoble",
+      "area": "Physics & Engineering",
+      "studyType": "Engineering Diploma",
+      "startDate": "2006-09-01",
+      "endDate": "2009-09-01",
+      "start": {
+        "year": 2006,
+        "month": 9
+      },
+      "end": {
+        "year": 2009,
+        "month": 9
+      },
+      "description": "",
+      "activities": "",
+      "gpa": "",
+      "courses": []
+    },
+    {
+      "description": "Year in Exchange",
+      "institution": "UCSD San Diego",
+      "area": "microelectronics",
+      "end": {
+        "year": 2009,
+        "month": 9
+      },
+      "start": {
+        "year": 2008,
+        "month": 9
+      }
+    }
+  ],
+  "volunteer": [],
+  "awards": [],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Fluent"
+    },
+    {
+      "language": "French",
+      "fluency": "Native"
+    }
+  ],
+  "interests": [],
+  "references": []
+}

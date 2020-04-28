@@ -1,10 +1,8 @@
-{% if CAREER_SUMMARY %}
+{% if RESUME["basics"].summary %}
 <section class="section summary-section">
 <h2 class="section-title"><i class="fa fa-user"></i>Career Profile</h2>
 <div class="summary">
-    {% for line in CAREER_SUMMARY %}
-        <p>{{line}}</p>
-    {% endfor %}
+    <p>{{RESUME.basics.summary}}</p>
 </div><!--//summary-->
 </section><!--//section-->
 {% endif %}

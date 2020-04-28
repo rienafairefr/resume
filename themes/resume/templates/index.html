@@ -1,11 +1,14 @@
 {% extends "base.html" %}
 
 {% block content %}
-
+{% if lang_siteurls %}
+    {% for lang, url in lang_siteurls.items() %}
+        <a class="float float-right btn {% if lang == DEFAULT_LANG %}btn-primary{% endif %}" href="{{ url }}/">{{ lang }}</a>
+    {% endfor %}
+{% endif %}
 <div class="wrapper">
     {% include 'includes/sidebar.html' %}
     <div class="main-wrapper">
-       
         {% include 'includes/career-profile.html' %}
                     
         {% include 'includes/experience.html' %}

@@ -1,11 +1,13 @@
-{% if EDUCATIONS %}
+{% if RESUME.education %}
 <div class="education-container container-block">
 <h2 class="container-block-title">Education</h2>
-{% for education in EDUCATIONS %}
+{% for education in RESUME.education %}
     <div class="item">
-	    <h4 class="degree">{{ education['degree'] }}</h4>
-	    <h5 class="meta">{{ education['meta'] }}</h5>
-	    <div class="time">{{ education['time'] }}</div>
+	    <h4 class="institution">{{ education['institution'] }}</h4>
+	    <h4 class="degree">{{ education['studyType'] }}</h4>
+	    <h5 class="meta">{{ education['area'] }}</h5>
+	    <h5 class="meta">{{ education['description'] }}</h5>
+	    <div class="time">{{ education['end']['year'] }}</div>
 	</div><!--//item-->
 {% endfor %}
 </div><!--//education-container-->

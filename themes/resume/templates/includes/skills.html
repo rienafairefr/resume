@@ -1,11 +1,11 @@
-{% if SKILLS %}
+{% if RESUME.skills %}
 <section class="skills-section section">
     <h2 class="section-title"><i class="fa fa-rocket"></i>Skills &amp; Proficiency</h2>
     <div class="skillset">
-        {% for skill in SKILLS %}
+        {% for skill in RESUME.skills %}
             <div class="item">
                 <div class="upper-row">
-                    <h4>{{ skill['title' ]}}</h4>
+                    <h4>{{ skill['name' ]}}</h4>
                 </div>
                 <p>
                     {{skill['details']}}
