@@ -1,0 +1,2 @@
+html[lang="en"] span[lang="fr"] {display: none}
+html[lang="fr"] span[lang="en"] {display: none}

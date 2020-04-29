@@ -32,16 +32,16 @@ class Localizer:
             value = resume[key]
             if isinstance(value, dict):
                 self.__localize_resume(value, language)
+                continue
             elif isinstance(value, list):
                 for v in value:
                     self.__localize_resume(v, language)
-            else:
-                if "_" in key:
-                    if language + "_" in key:
-                        new_key = key.split(language + "_")[1]
-                        change_key(resume, key, new_key)
-                    else:
-                        del resume[key]
+            if "_" in key:
+                if language + "_" in key:
+                    new_key = key.split(language + "_")[1]
+                    change_key(resume, key, new_key)
+                else:
+                    del resume[key]
 
     def __process_language(self, language):
         localized_resume = copy.deepcopy(self.resume)

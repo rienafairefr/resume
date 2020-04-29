@@ -1,6 +1,6 @@
 {% if RESUME.skills %}
 <section class="skills-section section">
-    <h2 class="section-title"><i class="fa fa-rocket"></i>Skills &amp; Proficiency</h2>
+    <h2 class="section-title"><i class="fa fa-rocket"></i><span lang="en">Skills &amp; Proficiency</span><span lang="fr">Connaissances &amp; Niveau</span></h2>
     <div class="skillset">
         {% for skill in RESUME.skills %}
             <div class="item">
@@ -8,7 +8,10 @@
                     <h4>{{ skill['name' ]}}</h4>
                 </div>
                 <p>
-                    {{skill['details']}}
+                    {{skill['level']}}
+                </p>
+                <p>
+                    {{skill['x-details']}}
                 </p>
             </div><!--//item-->
         {% endfor %}

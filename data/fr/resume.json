@@ -3,22 +3,20 @@
     "name": "Matthieu Berthomé",
     "picture": "https://avatars2.githubusercontent.com/u/758517?v=4",
     "label": "",
-    "headline": "",
-    "summary": "Multi-faceted Engineer, from the electrons to the Cloud <i class=\"fa fa-heart\"></i> building projects, and helping others build their projects",
+    "headline": "Développeur Full-Stack",
+    "summary": "Ingénieur multi-talent, des électrons au Cloud <br><i class=\"fa fa-heart\"></i> construire des projets, et aider les autres à construire leurs projets",
     "website": null,
     "blog": null,
     "yearsOfExperience": null,
     "id": "f4f1b8b0-a0d1-4de4-8d20-35cb012e53b2",
     "email": "matthieu@mmea.fr",
     "region": "LILLE",
-    "location": {},
+    "location": {
+      "city": "Lille",
+      "countryCode": "FR"
+    },
     "phone": "06 09 63 43 87",
     "profiles": [
-      {
-        "network": "gitconnected",
-        "username": "rienafairefr",
-        "url": "https://gitconnected.com/rienafairefr"
-      },
       {
         "network": "GitHub",
         "username": "rienafairefr",
@@ -39,24 +37,27 @@
   "skills": [
     {
       "name": "Python",
-      "level": "Advanced",
+      "level": "Avancé",
       "rating": 4,
       "yearsOfExperience": 5,
-      "keywords": []
+      "keywords": [],
+      "x-details": "création d'outils CLI, d'APIs, scripts, scraping, etc..."
     },
     {
       "name": "Javascript",
-      "level": "Intermediate",
+      "level": "Intermédiaire",
       "rating": 3,
       "yearsOfExperience": 2,
-      "keywords": []
+      "keywords": [],
+      "x-details": "Création, maintenance et modification de sites Vue.js"
     },
     {
       "name": "Sysadmin & Devops",
-      "level": "Advanced",
+      "level": "Avancé",
       "rating": 4,
       "yearsOfExperience": 3,
-      "keywords": []
+      "keywords": [],
+      "x-details": "Maintenu, mis à jour plusieurs serveurs, personel & professionel, utilisation avancée de Docker, utilisation IaC (terraform, pulumi), noob en kubernetes mais intéressé"
     }
   ],
   "projects": [
@@ -154,25 +155,28 @@
       "position": "Startup founder",
       "website": "www.whisbee.eu",
       "location": "LILLE",
-      "summary": "Connecting your banks to your life",
+      "summary": "Connectez vos banques à votre vie",
       "isCurrentRole": true,
       "startDate": "2019-06-01",
-      "endDate": "",
+      "endDate": "2020-04-30",
       "start": {
         "year": 2019,
         "month": 6
       },
       "end": {},
       "highlights": [
-        "Backend, frontend, bizdev"
+        "Backend, frontend, devops, bizdev",
+        "Authentication APIs (Oauth2, Auth0)",
+        "OpenAPI/Swwagger",
+        "NoSQL"
       ]
     },
     {
       "company": "Freelance",
-      "position": "Instructor in Electronics & laser cutting",
+      "position": "Formateur Electronique & découpe laser",
       "website": "",
       "location": "LILLE",
-      "summary": "Course development, instruction of small groups in the manipulation & beecoming independent ",
+      "summary": "Ecriture de cours, formation en petits groupes sur la manipulation et devenir indépendant sur les équipements",
       "isCurrentRole": true,
       "startDate": "2017-01-01",
       "endDate": "",
@@ -182,16 +186,16 @@
       },
       "end": {},
       "highlights": [
-        "laser cutting machines (Trotec)",
-        "Electronics lab (soldering, PCB conception & '\n                   'fabrication)"
+        "Machines de découpe laser (Trotec)",
+        "Laboratoire électronique (soudure, Conception & Fabrication de PCB)"
       ]
     },
     {
       "company": "INRIA",
-      "position": "Full Stack Developer",
+      "position": "Développeur Full Stack",
       "website": "www.inria.fr",
       "location": "LILLE",
-      "summary": "Part of a remote team of 5 engineers at FIT Iot-LAB www.iot-lab.info",
+      "summary": "Partie d'une équipe full-remote de 5 ingénieurs s'occupant de FIT Iot-LAB <br><a href=\"https://  www.iot-lab.info\">www.iot-lab.info</a>",
       "isCurrentRole": false,
       "startDate": "2017-06-01",
       "endDate": "2019-06-01",
@@ -204,17 +208,17 @@
         "month": 6
       },
       "highlights": [
-        "Maintenance of the platform\\'s backend, frontend code, CLI-tools, APIs",
-        "Sysadmin. Deployments of servers",
-        "Managing of two successful internships"
+        "Maintenance de l'architecture interne de la plateforme, du frontend, des outils CLI, & APIs",
+        "Sysadmin. Déploiement de serveurs",
+        "Management de stagiaires Master 2"
       ]
     },
     {
       "company": "CNRS",
-      "position": "Development Engineer",
+      "position": "Ingénieur recherche",
       "website": "www.cnrs.fr",
       "location": "LILLE",
-      "summary": "Maintenance, execution of laser micromachining jobs on a femtosecond laser.",
+      "summary": "Maintenance, exécution de jobs de micromachining sur un laser femtoseconde",
       "isCurrentRole": false,
       "startDate": "2014-06-01",
       "endDate": "2017-01-01",
@@ -227,15 +231,15 @@
         "month": 9
       },
       "highlights": [
-        "Development of interface software: WPF .NET UI, AlphaCAM postprocessor, G-code generation"
+        "Développement d'interface pour la machine: WPF .NET, postprocesseurs AlphaCAM, génération de G-code"
       ]
     },
     {
       "company": "CEA-LETI (Grenoble) & EPFL (Lausanne)",
-      "position": "Research Assistant",
+      "position": "Assistant Recherche (doctorant)",
       "website": "",
       "location": "Grenoble & Lausanne",
-      "summary": "Research in micro-nano electronics (new transistor structure)",
+      "summary": "Recherche en micro-nano electronics (nouvelle structure de transistor)",
       "isCurrentRole": false,
       "startDate": "2010-01-01",
       "endDate": "2013-07-01",
@@ -248,7 +252,8 @@
         "month": 7
       },
       "highlights": [
-        "Developed tools for data collection & processing, instrumentation. Excel VBA, Matlab Scripts, Comsol physical simulations. Technology CAD (TCAD) software (Silvaco ATLAS)"
+        "Développé des outils de collection données, processing de données pour l'instrumentation.",
+        "Excel VBA, Matlab, Comsol. Technology CAD (TCAD) (Silvaco ATLAS)"
       ]
     }
   ],
@@ -256,8 +261,8 @@
   "education": [
     {
       "institution": "INPG Phelma, Grenoble",
-      "area": "Physics & Engineering",
-      "studyType": "Engineering Diploma",
+      "area": "Ingénieur Physicien",
+      "studyType": "diplôme d'ingénieur",
       "startDate": "2006-09-01",
       "endDate": "2009-09-01",
       "start": {
@@ -274,9 +279,9 @@
       "courses": []
     },
     {
-      "description": "Year in Exchange",
+      "description": "Année en échange",
       "institution": "UCSD San Diego",
-      "area": "microelectronics",
+      "area": "microélectronique",
       "end": {
         "year": 2009,
         "month": 9

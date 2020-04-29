@@ -18,7 +18,7 @@ PATH = 'content'
 
 TIMEZONE = 'Europe/Paris'
 
-DEFAULT_LANG = 'fr'
+DEFAULT_LANG = 'en'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -48,7 +48,7 @@ DEBUG = False
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
 
-PLUGIN_PATHS = ['plugins', os.path.expanduser('~/pelican-plugins')]
+PLUGIN_PATHS = [os.path.expanduser('~/pelican-plugins')]
 PLUGINS = ['i18n_subsites']
 
 
@@ -70,8 +70,14 @@ I18N_SUBSITES = {
     }
 }
 
-RESUME = get_data('en')
+JINJA_ENVIRONMENT = {
+  'extensions': ['jinja2.ext.i18n']
+}
+I18N_GETTEXT_NEWSTYLE = True
 
+RESUME = get_data('en')
+RESUME['basics']['email'] = obfuscate_string(RESUME['basics']['email'])
+RESUME['basics']['phone'] = obfuscate_string(RESUME['basics']['phone'])
 ######
 #
 #   RESUME DATA
@@ -79,82 +85,5 @@ RESUME = get_data('en')
 ######
 
 CSS_FILE = 'main-6.css'
-NAME = 'Matthieu Berthomé'
+
 PIC = 'profile.png'
-EMAIL = obfuscate_string('matthieu@mmea.fr')
-PHONE = obfuscate_string('(+33) 6 09 63 43 87')
-LINKEDIN = 'matthieu-berthomé'
-GITHUB = 'rienafairefr'
-TWITTER = 'm_berthome'
-
-# STATIC_PATHS = ['theme/static']
-"""
-EDUCATIONS = [
-    {
-        'degree': 'Physics Engineer, specialisation in Micro-Nano-electronics',
-        'meta': 'Grenoble INP Phelma',
-        'time': '2009'
-    },
-    {
-        'degree': 'Year in Exchange',
-        'meta': 'UCSD San Diego',
-        'time': '2008-2009'
-    },
-    {
-        'degree': 'High School, Baccalauréat S mention Bien',
-        'meta': 'Lycée Général Loudéac',
-        'time': '2004'
-    }
-]
-
-LANGUAGES = [
-    {
-        'name': 'French',
-        'description': 'Native'
-    },
-    {
-        'name': 'English',
-        'description': 'Fluent'
-    }
-]
-INTERESTS = [
-    'Laser cutting',
-    'Programming, ever since my dad got a 286 in the 90s'
-]
-PROJECTS = [
-    {
-        'title': 'Open Source Contributions',
-        'tagline': 'Contributor to various projects: FlatCAM, openapi-generator, pulumi'
-    },
-    {
-        'title': 'API-access libraries',
-        'tagline': 'Bridge API, Budget Insight, Fintecture, Rebrickable'
-    }
-]
-PROJECT_INTRO = 'Projects or Open-Source libraries'
-SKILLS = [
-    {
-        'title': 'Python',
-        'details': 'creating CLI-tools, backend APIs, one-off scripts, scraping, etc...'
-    },
-    {
-        'title': 'Sysadmin - Devops',
-        'details': 'Maintained multiple servers, personal & work, heavily using '
-                   'Docker containers, using IaC (terraform, pulumi), interested in kubernetes'
-    },
-    {
-        'title': 'Javascript',
-        'details': 'Modified & maintained Vue.js site & various js code'
-    },
-    {
-        'title': 'Java',
-        'details': 'Modified & maintained API services in Servlent/OSGI \n Minecraft modding'
-    },
-]
-CAREER_SUMMARY = [
-    'Multi-faceted Engineer, from the electrons to the Cloud',
-    '<i class="fa fa-heart"></i> building projects, and helping others build their projects']
-
-TAGLINE = 'Lead Full Stack Developer'
-
-"""

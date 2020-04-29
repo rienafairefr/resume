@@ -3,36 +3,28 @@
 <div class="sidebar-wrapper">
     <div class="profile-container">
         <img class="profile-img" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/{% if PIC %}{{ PIC }}{% else %}profile.png{% endif %}" alt="profile picture" />
-        <h1 class="name">{% if NAME %}{{NAME}}{% else %}Alan Doe{% endif %}</h1>
-        <h3 class="tagline">{% if TAGLINE %}{{TAGLINE}}{% else %}Full Stack Developer{% endif %}</h3>
+        <h1 class="name">{% if RESUME.basics.name %}{{RESUME.basics.name}}{% else %}Alan Doe{% endif %}</h1>
+        <h3 class="tagline">{% if RESUME.basics.headline %}{{RESUME.basics.headline}}{% else %}Developper{% endif %}</h3>
     </div><!--//profile-container-->
     
     <div class="contact-container container-block">
         <ul class="list-unstyled contact-list">
            
-            {% if EMAIL %}
-            <li class="email"><i class="fa fa-envelope"></i><a href="mailto: {{EMAIL}}">{{EMAIL}}</a></li>
+            {% if RESUME.basics.email %}
+            <li class="email"><i class="fa fa-envelope"></i><a href="mailto: {{RESUME.basics.email}}">{{RESUME.basics.email}}</a></li>
             {% endif %}
             
-            {% if PHONE %}
-            <li class="phone"><i class="fa fa-phone"></i><a href="tel:{{PHONE}}">{{PHONE}}</a></li>
+            {% if RESUME.basics.phone %}
+            <li class="phone"><i class="fa fa-phone"></i><a href="tel:{{RESUME.basics.phone}}">{{RESUME.basics.phone}}</a></li>
             {% endif %}
             
-            {% if WEBSITE %}
-            <li class="website"><i class="fa fa-globe"></i><a href="http://{{WEBSITE}}" target="_blank">{{WEBSITE}}</a></li>
+            {% if RESUME.basics.website %}
+            <li class="website"><i class="fa fa-globe"></i><a href="http://{{RESUME.basics.website}}" target="_blank">{{RESUME.basics.website}}</a></li>
             {% endif %}
-            
-            {% if LINKEDIN %}
-            <li class="linkedin"><i class="fa fa-linkedin"></i><a href="https://in.linkedin.com/in/{{LINKEDIN}}" target="_blank">{{LINKEDIN}}</a></li>
-            {% endif %}
-            
-            {% if GITHUB %}
-            <li class="github"><i class="fa fa-github"></i><a href="http://github.com/{{GITHUB}}" target="_blank">@{{GITHUB}}</a></li>
-            {% endif %}
-            
-            {% if TWITTER %}
-            <li class="twitter"><i class="fa fa-twitter"></i><a href="https://twitter.com/{{TWITTER}}" target="_blank">@{{TWITTER}}</a></li>
-            {% endif %}
+
+            {% for profile in RESUME.basics.profiles %}
+            <li class="{{ profile.network|lower }}"><i class="fa fa-{{ profile.network|lower }}"></i><a href="{{profile.url}}" target="_blank">{{profile.username}}</a></li>
+            {% endfor %}
             
         </ul>
     </div><!--//contact-container-->
