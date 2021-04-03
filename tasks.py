@@ -6,7 +6,7 @@ import sys
 import datetime
 
 from pathlib import Path
-from invoke import task
+from invoke import task, Collection
 from pelican.server import ComplexHTTPRequestHandler, RootedHTTPServer
 from pelican.settings import DEFAULT_CONFIG, get_settings_from_file
 
@@ -21,6 +21,7 @@ CONFIG = {
     'settings_publish': 'publishconf.py',
     # Output path. Can be absolute or relative to tasks.py. Default: 'output'
     'deploy_path': SETTINGS['OUTPUT_PATH'],
+    'input_path': SETTINGS['PATH'],
     # Github Pages configuration
     'github_pages_branch': 'gh-pages',
     'commit_message': "'Publish site on {}'".format(datetime.date.today().isoformat()),
@@ -41,19 +42,19 @@ def clean(c):
 @task
 def build(c):
     """Build local version of site"""
-    c.run('pelican -s {settings_base}'.format(**CONFIG))
+    c.run('pelican {input_path} -s {settings_base} -o {deploy_path} -D'.format(**CONFIG), echo=True)
 
 
 @task
 def rebuild(c):
     """`build` with the delete switch"""
-    c.run('pelican -d -s {settings_base}'.format(**CONFIG))
+    c.run('pelican {input_path} -d -s {settings_base} -o {deploy_path} -D'.format(**CONFIG), echo=True)
 
 
 @task
 def regenerate(c):
     """Automatically regenerate site upon file modification"""
-    c.run('pelican -r -s {settings_base}'.format(**CONFIG))
+    c.run('pelican {input_path} -r -s {settings_base} -o {deploy_path} -D'.format(**CONFIG), echo=True)
 
 
 @task
@@ -73,16 +74,9 @@ def serve(c):
 
 
 @task
-def reserve(c):
-    """`build`, then `serve`"""
-    build(c)
-    serve(c)
-
-
-@task
 def preview(c):
     """Build production version of site"""
-    c.run('pelican -s {settings_publish}'.format(**CONFIG))
+    c.run('pelican {input_path} -s {settings_publish} -o {deploy_path}'.format(**CONFIG), echo=True)
 
 
 @task
@@ -102,20 +96,11 @@ def livereload(c):
     theme_path = SETTINGS['THEME']
     for path in Path(theme_path).rglob('*.*'):
         server.watch(str(path), lambda: build(c))
+    # Watch data path
+    for path in Path('data').rglob('*.*'):
+        server.watch(str(path), lambda: build(c))
     # Serve output path on configured port
     server.serve(port=CONFIG['port'], root=CONFIG['deploy_path'], debug=SETTINGS.get('DEBUG', False))
-
-
-@task
-def publish(c):
-    """Publish to production via rsync"""
-    c.run('pelican -s {settings_publish}'.format(**CONFIG))
-    c.run(
-        'rsync --delete --exclude ".DS_Store" -pthrvz -c '
-        '-e "ssh -p {ssh_port}" '
-        '{} {ssh_user}@{ssh_host}:{ssh_path}'.format(
-            CONFIG['deploy_path'].rstrip('/') + '/',
-            **CONFIG))
 
 
 @task

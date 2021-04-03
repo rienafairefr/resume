@@ -76,14 +76,25 @@ JINJA_ENVIRONMENT = {
 I18N_GETTEXT_NEWSTYLE = True
 
 RESUME = get_data('en')
-RESUME['basics']['email'] = obfuscate_string(RESUME['basics']['email'])
+if 'email' in RESUME['basics']:
+    RESUME['basics']['email'] = obfuscate_string(RESUME['basics']['email'])
+if RESUME['basics']['x-emails']:
+    RESUME['basics']['x-emails'] = [obfuscate_string(e) for e in RESUME['basics']['x-emails']]
 RESUME['basics']['phone'] = obfuscate_string(RESUME['basics']['phone'])
+
+RESUME['work_by_category'] = {}
+for work_item in RESUME.get('work', []):
+    RESUME['work_by_category'].setdefault(work_item['x-category'], []).append(work_item)
+
+
+PROJECT_INTRO = "<span lang=\"en\">Open-source contributions</span><span lang="fr">Contributions open-source</span>"
+
 ######
 #
 #   RESUME DATA
 #
 ######
 
-CSS_FILE = 'main-6.css'
+CSS_FILE = 'main.css'
 
 PIC = 'profile.png'

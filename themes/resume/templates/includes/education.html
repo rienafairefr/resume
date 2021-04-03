@@ -7,7 +7,7 @@
 	    <h4 class="degree">{{ education['studyType'] }}</h4>
 	    <h5 class="meta">{{ education['area'] }}</h5>
 	    <h5 class="meta">{{ education['description'] }}</h5>
-	    <div class="time">{{ education['end']['year'] }}</div>
+	    <div class="time">{{ '-'.join(education['endDate'].split('-')[:2]) }}</div>
 	</div><!--//item-->
 {% endfor %}
 </div><!--//education-container-->

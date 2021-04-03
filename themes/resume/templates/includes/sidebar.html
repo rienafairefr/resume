@@ -13,6 +13,11 @@
             {% if RESUME.basics.email %}
             <li class="email"><i class="fa fa-envelope"></i><a href="mailto: {{RESUME.basics.email}}">{{RESUME.basics.email}}</a></li>
             {% endif %}
+            {% if RESUME.basics['x-emails'] %}
+            {% for email in RESUME.basics['x-emails'] %}
+            <li class="email"><i class="fa fa-envelope"></i><a href="mailto: {{email}}">{{email}}</a></li>
+            {% endfor %}
+            {% endif %}
             
             {% if RESUME.basics.phone %}
             <li class="phone"><i class="fa fa-phone"></i><a href="tel:{{RESUME.basics.phone}}">{{RESUME.basics.phone}}</a></li>

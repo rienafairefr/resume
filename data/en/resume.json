@@ -9,7 +9,7 @@
     "blog": null,
     "yearsOfExperience": null,
     "id": "f4f1b8b0-a0d1-4de4-8d20-35cb012e53b2",
-    "email": "matthieu@mmea.fr",
+    "x-emails": ["matthieu@mmea.fr", "matthieu@whisbee.eu"],
     "region": "LILLE",
     "location": {
       "city": "Lille",
@@ -49,7 +49,7 @@
       "rating": 3,
       "yearsOfExperience": 2,
       "keywords": [],
-      "x-details": "Modified & maintained Vue.js site & various js code"
+      "x-details": "Modified & maintained Vue.js, React code, node.js APIs"
     },
     {
       "name": "Sysadmin & Devops",
@@ -149,130 +149,151 @@
       "videos": []
     }
   ],
+  "x-work-categories": {
+    "freelance": {"description":  "as a contractor"},
+    "employee": {"description":  "as an employee"}
+  },
   "work": [
     {
-      "company": "Whisbee / Alfred",
-      "position": "Startup founder",
-      "website": "www.whisbee.eu",
+      "x-category": "freelance",
+      "company": "Legitbee",
+      "website": "www.legitbee.com",
       "location": "LILLE",
-      "summary": "Connecting your banks to your life",
+      "summary": "SaaS-ification project",
       "isCurrentRole": true,
-      "startDate": "2019-06-01",
-      "endDate": "2020-04-30",
-      "start": {
-        "year": 2019,
-        "month": 6
-      },
-      "end": {},
+      "startDate": "2021-02",
       "highlights": [
-        "Backend, frontend, devops, bizdev",
-        "Authentication APIs (Oauth2, Auth0)",
-        "OpenAPI",
-        "NoSQL"
+        "Stripe integration",
+        "Open banking integration",
+        "Encrypted storage"
+      ],
+      "x-stack": [
+        "nodejs", "firebase", "react"
       ]
     },
     {
-      "company": "Freelance",
+      "x-category": "freelance",
+      "company": "TradeIn",
+      "website": "www.tradeinsur.com",
+      "location": "LILLE",
+      "summary": "Open-banking project",
+      "isCurrentRole": true,
+      "startDate": "2020-05",
+      "endDate": "2020-07",
+      "highlights": [
+        "Open banking API integration: Fintecture",
+        "Accounting API integration: Quickbooks"
+      ],
+      "x-stack": [
+        "vuejs", "laravel", "wordpress"
+      ]
+    },
+    {
+      "x-category": "freelance",
+      "company": "Fintecture",
+      "website": "www.fintecture.com",
+      "summary": "Documentation project",
+      "isCurrentRole": true,
+      "startDate": "2020-07",
+      "endDate": "2020-07",
+      "highlights": [
+        "Consulting on Public API Documentation"
+      ],
+      "x-stack": [
+        "OpenAPI"
+      ]
+    },
+    {
+      "x-category": "freelance",
+      "company": "Techshop Lille",
       "position": "Instructor in Electronics & laser cutting",
       "website": "",
       "location": "LILLE",
-      "summary": "Course development, instruction of small groups in the manipulation & beecoming independent ",
+      "summary": "Course development, instruction of small groups in the manipulation & becoming independent ",
       "isCurrentRole": true,
-      "startDate": "2017-01-01",
-      "endDate": "",
-      "start": {
-        "year": 2017,
-        "month": 6
-      },
-      "end": {},
+      "startDate": "2017-06",
+      "endDate": "2019-10",
       "highlights": [
         "laser cutting machines (Trotec)",
         "Electronics lab (soldering, PCB conception & fabrication)"
       ]
     },
     {
+      "x-category": "employee",
+      "company": "Speech2sense",
+      "position": "Lead Full Stack Developer",
+      "website": "www.speech2sense.com",
+      "location": "LILLE",
+      "summary": "Core of the dev responsibilities",
+      "isCurrentRole": true,
+      "startDate": "2020-08",
+      "highlights": [
+        "Atout.care: vocal assistant mobile app for ambulatory/outpatient nurses",
+        "Architecting, developing, deploying"
+      ],
+      "x-stack": [
+        "nodejs", "graphql", "flutter", "wordpress", "terraform"
+      ]
+    },
+    {
+      "x-category": "employee",
       "company": "INRIA",
       "position": "Full Stack Developer",
       "website": "www.inria.fr",
       "location": "LILLE",
       "summary": "Part of a remote team of 5 engineers at FIT Iot-LAB <br><a href=\"https://  www.iot-lab.info\">www.iot-lab.info</a>",
       "isCurrentRole": false,
-      "startDate": "2017-06-01",
-      "endDate": "2019-06-01",
-      "start": {
-        "year": 2017,
-        "month": 6
-      },
-      "end": {
-        "year": 2019,
-        "month": 6
-      },
+      "startDate": "2017-06",
+      "endDate": "2019-06",
       "highlights": [
         "Maintenance of the platform\\'s backend, frontend code, CLI-tools, APIs",
         "Sysadmin. Deployments of servers",
         "Managing of two successful internships"
+      ],
+      "x-stack": [
+        "python", "vuejs"
       ]
     },
     {
+      "x-category": "employee",
       "company": "CNRS",
       "position": "Development Engineer",
       "website": "www.cnrs.fr",
       "location": "LILLE",
       "summary": "Maintenance, execution of laser micromachining jobs on a femtosecond laser",
       "isCurrentRole": false,
-      "startDate": "2014-06-01",
-      "endDate": "2017-01-01",
-      "start": {
-        "year": 2014,
-        "month": 6
-      },
-      "end": {
-        "year": 2017,
-        "month": 9
-      },
+      "startDate": "2014-06",
+      "endDate": "2017-09",
       "highlights": [
         "Development of interface software: WPF .NET UI, AlphaCAM postprocessor, G-code generation"
+      ],
+      "x-stack": [
+        "csharp"
       ]
     },
     {
+      "x-category": "employee",
       "company": "CEA-LETI (Grenoble) & EPFL (Lausanne)",
       "position": "Research Assistant",
       "website": "",
       "location": "Grenoble & Lausanne",
       "summary": "Research in micro-nano electronics (new transistor structure)",
       "isCurrentRole": false,
-      "startDate": "2010-01-01",
-      "endDate": "2013-07-01",
-      "start": {
-        "year": 2010,
-        "month": 1
-      },
-      "end": {
-        "year": 2013,
-        "month": 7
-      },
+      "startDate": "2010-01",
+      "endDate": "2013-07",
       "highlights": [
         "Developed tools for data collection & processing, instrumentation.",
         "Excel VBA, Matlab Scripts, Comsol simulations. Technology CAD (TCAD) (Silvaco ATLAS)"
       ]
     }
   ],
-  "publications": [],
   "education": [
     {
       "institution": "INPG Phelma, Grenoble",
       "area": "Physics & Engineering",
       "studyType": "Engineering Diploma",
-      "startDate": "2006-09-01",
-      "endDate": "2009-09-01",
-      "start": {
-        "year": 2006,
-        "month": 9
-      },
-      "end": {
-        "year": 2009,
-        "month": 9
-      },
+      "startDate": "2006-09",
+      "endDate": "2009-09",
       "description": "",
       "activities": "",
       "gpa": "",
@@ -282,14 +303,8 @@
       "description": "Year in Exchange",
       "institution": "UCSD San Diego",
       "area": "microelectronics",
-      "end": {
-        "year": 2009,
-        "month": 9
-      },
-      "start": {
-        "year": 2008,
-        "month": 9
-      }
+      "startDate": "2008-09",
+      "endDate": "2009-09"
     }
   ],
   "volunteer": [],
