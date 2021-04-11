@@ -49,7 +49,7 @@
       "rating": 3,
       "yearsOfExperience": 2,
       "keywords": [],
-      "x-details": "Modified & maintained Vue.js, React code, node.js APIs"
+      "x-details": "Created, modified & maintained Vue.js, React frontends, node.js APIs"
     },
     {
       "name": "Sysadmin & Devops",
@@ -57,107 +57,60 @@
       "rating": 4,
       "yearsOfExperience": 3,
       "keywords": [],
-      "x-details": "Maintained multiple servers, personal & work, heavily using Docker containers, using IaC (terraform, pulumi), interested in kubernetes"
+      "x-details": "Maintained multiple servers, personal & work, heavily using Docker containers, using IaC (terraform, pulumi) & Kubernetes"
     }
   ],
   "projects": [
     {
-      "name": "pynynab",
+      "x-category": "creation",
       "displayName": "pynYNAB",
-      "summary": "a python client for the new YNAB",
-      "website": "",
+      "summary": "a python client for the new YNAB<br>before it launched a public API<br>Reverse-engineering, ~2016",
       "githubUrl": "https://github.com/rienafairefr/pynYNAB",
-      "primaryLanguage": "JavaScript",
-      "languages": [
-        "JavaScript",
-        "Shell",
-        "Python",
-        "HTML"
-      ],
-      "libraries": [],
-      "images": [],
-      "videos": []
+      "primaryLanguage": "python",
+      "x-stack": ["python"]
     },
     {
-      "name": "openapi-generator",
-      "displayName": "openapi-generator",
-      "summary": "OpenAPI Generator allows generation of API client libraries (SDK generation), server stubs, documentation and configuration automatically given an OpenAPI Spec (v2, v3)",
-      "website": "https://openapi-generator.tech",
-      "githubUrl": "https://github.com/OpenAPITools/openapi-generator",
-      "primaryLanguage": "Java",
-      "languages": [
-        "Dart",
-        "ActionScript",
-        "PHP",
-        "PowerShell",
-        "Ruby",
-        "Rust",
-        "CSS",
-        "JavaScript",
-        "C#",
-        "TypeScript",
-        "Kotlin",
-        "Dockerfile",
-        "Vue",
-        "Shell",
-        "Batchfile",
-        "Java",
-        "HTML",
-        "Scala",
-        "Apex"
-      ],
-      "libraries": [],
-      "images": [],
-      "videos": []
+      "x-category": "creation",
+      "displayName": "pyrebrickable",
+      "summary": "CLI + library + DB for rebrickable.com, a Lego brick website for cataloging",
+      "githubUrl": "https://github.com/rienafairefr/pyrebrickable",
+      "x-stack": ["python"]
     },
     {
-      "name": "pulumi",
-      "displayName": "pulumi",
-      "summary": "Pulumi - Modern Infrastructure as Code. Any cloud, any language 🚀",
-      "website": "https://www.pulumi.com",
-      "githubUrl": "https://github.com/pulumi/pulumi",
-      "primaryLanguage": "Go",
-      "languages": [
-        "C#",
-        "Go",
-        "Makefile",
-        "TypeScript",
-        "Shell",
-        "Python",
-        "JavaScript",
-        "PowerShell",
-        "Batchfile",
-        "F#"
-      ],
-      "libraries": [],
-      "images": [],
-      "videos": []
+      "x-category": "creation",
+      "displayName": "Bobiverse maps",
+      "summary": "Dataviz project from a series of books about a sentient Von Neumann probe",
+      "githubUrl": "https://github.com/rienafairefr/bobiversestmap",
+      "x-stack": [
+        "d3js", "python"
+      ]
     },
     {
-      "name": "cli-tools",
-      "displayName": "cli-tools",
-      "summary": "IoT-LAB CLI tools",
-      "website": "",
-      "githubUrl": "https://github.com/iot-lab/cli-tools",
-      "primaryLanguage": "Python",
-      "languages": [
-        "Python",
-        "Shell"
+      "displayName": "Misc.",
+      "x-category": "opensource",
+      "highlights": [
+        "OpenAPI Generator, for generating clients/libraries from an OpenAPI spec",
+        "Movinyl, for generating 'vinyl' images from movies.",
+        "TardisBank, for managing pocket money for kids"
       ],
-      "libraries": [],
-      "images": [],
-      "videos": []
+      "summary": "Miscellaneous contributions over the years.",
+      "x-stack": [
+        "docker", "java", "openapi", "go", "open-source"
+      ]
     }
   ],
-  "x-work-categories": {
+  "x-categories": {
     "freelance": {"description":  "as a contractor"},
-    "employee": {"description":  "as an employee"}
+    "employee": {"description":  "as an employee"},
+    "opensource": {"description":  "open-source contributions"},
+    "creation": {"description":  "creations"}
   },
   "work": [
     {
       "x-category": "freelance",
+      "position": "Freelance Full Stack Developer",
       "company": "Legitbee",
-      "website": "www.legitbee.com",
+      "website": "https://www.legitbee.com",
       "location": "LILLE",
       "summary": "SaaS-ification project",
       "isCurrentRole": true,
@@ -173,16 +126,17 @@
     },
     {
       "x-category": "freelance",
+      "position": "Freelance Full Stack Developer",
       "company": "TradeIn",
-      "website": "www.tradeinsur.com",
+      "website": "https://www.tradeinsur.com",
       "location": "LILLE",
       "summary": "Open-banking project",
       "isCurrentRole": true,
       "startDate": "2020-05",
       "endDate": "2020-07",
       "highlights": [
-        "Open banking API integration: Fintecture",
-        "Accounting API integration: Quickbooks"
+        "Open banking API integration : Fintecture",
+        "Accounting API integration : Quickbooks"
       ],
       "x-stack": [
         "vuejs", "laravel", "wordpress"
@@ -190,8 +144,9 @@
     },
     {
       "x-category": "freelance",
+      "position": "Freelance Consultant",
       "company": "Fintecture",
-      "website": "www.fintecture.com",
+      "website": "https://www.fintecture.com",
       "summary": "Documentation project",
       "isCurrentRole": true,
       "startDate": "2020-07",
@@ -200,16 +155,16 @@
         "Consulting on Public API Documentation"
       ],
       "x-stack": [
-        "OpenAPI"
+        "openapi"
       ]
     },
     {
       "x-category": "freelance",
       "company": "Techshop Lille",
+      "website": "https://www.techshop-lille.fr/",
       "position": "Instructor in Electronics & laser cutting",
-      "website": "",
       "location": "LILLE",
-      "summary": "Course development, instruction of small groups in the manipulation & becoming independent ",
+      "summary": "Course development,   instruction of small groups",
       "isCurrentRole": true,
       "startDate": "2017-06",
       "endDate": "2019-10",
@@ -228,11 +183,12 @@
       "isCurrentRole": true,
       "startDate": "2020-08",
       "highlights": [
-        "Atout.care: vocal assistant mobile app for ambulatory/outpatient nurses",
-        "Architecting, developing, deploying"
+        "Atout.care: vocal assistant mobile app <br>for ambulatory/outpatient nurses",
+        "Architecting, developing, deploying",
+        "Message queues, PostgreSQL in the backend"
       ],
       "x-stack": [
-        "nodejs", "graphql", "flutter", "wordpress", "terraform"
+        "nodejs", "graphql", "flutter", "terraform", "firebase", "kubernetes"
       ]
     },
     {
@@ -241,7 +197,7 @@
       "position": "Full Stack Developer",
       "website": "www.inria.fr",
       "location": "LILLE",
-      "summary": "Part of a remote team of 5 engineers at FIT Iot-LAB <br><a href=\"https://  www.iot-lab.info\">www.iot-lab.info</a>",
+      "summary": "Part of a remote team of 5 engineers at FIT Iot-LAB <br><a href=\"https://www.iot-lab.info\">www.iot-lab.info</a>",
       "isCurrentRole": false,
       "startDate": "2017-06",
       "endDate": "2019-06",
@@ -307,8 +263,6 @@
       "endDate": "2009-09"
     }
   ],
-  "volunteer": [],
-  "awards": [],
   "languages": [
     {
       "language": "English",
@@ -318,7 +272,5 @@
       "language": "French",
       "fluency": "Native"
     }
-  ],
-  "interests": [],
-  "references": []
+  ]
 }

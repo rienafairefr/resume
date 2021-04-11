@@ -182,6 +182,7 @@ p {
   margin-top: 0;
   margin-bottom: 20px;
 }
+
 .main-wrapper .section-title .fa {
   width: 30px;
   height: 30px;
@@ -203,6 +204,7 @@ p {
   position: relative;
   top: -2px;
 }
+
 .main-wrapper .section {
   margin-bottom: 60px;
 }
@@ -322,7 +324,15 @@ used for profile image
 }
 
 .stack i {
-  font-size: 40px;
+  font-size: 45px;
+}
+
+.devicon-graphql-plain-wordmark path {
+  fill: #545E6C;
+}
+
+.devicon-openapi-plain-wordmark g path {
+  fill: #545E6C;
 }
 
 @media print {
@@ -362,4 +372,43 @@ used for profile image
     display: none;
   }
 
+}
+
+.item .details {
+  display: flex;
+}
+.item .details div {
+  flex-grow: 1
+}
+.item .details .stack {
+  width: 50px;
+  flex-grow: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.item .details .stack i {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.main-wrapper .section-title img {
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  display: inline-block;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background: #2e4049;
+  text-align: center;
+  font-size: 16px;
+  position: relative;
+  top: -2px;
 }

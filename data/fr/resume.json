@@ -9,7 +9,10 @@
     "blog": null,
     "yearsOfExperience": null,
     "id": "f4f1b8b0-a0d1-4de4-8d20-35cb012e53b2",
-    "email": "matthieu@mmea.fr",
+    "x-emails": [
+      "matthieu@mmea.fr",
+      "matthieu@whisbee.eu"
+    ],
     "region": "LILLE",
     "location": {
       "city": "Lille",
@@ -57,127 +60,100 @@
       "rating": 4,
       "yearsOfExperience": 3,
       "keywords": [],
-      "x-details": "Maintenu, mis à jour plusieurs serveurs, personel & professionel, utilisation avancée de Docker, utilisation IaC (terraform, pulumi), kubernetes"
-    },
-    {
-      "name": "PHP",
-      "level": "Intermédiaire",
-      "rating": 2,
-      "yearsOfExperience": 1,
-      "keywords": [],
-      "x-details": "PHP programmation objet (Laravel), PHP old-school (scheduleur OAR)"
+      "x-details": "Maintenu, mis à jour plusieurs serveurs, personel & professionel, utilisation avancée de Docker, utilisation IaC (terraform, pulumi), Kubernetes"
     }
   ],
   "projects": [
     {
+      "x-category": "creation",
       "name": "pynynab",
       "displayName": "pynYNAB",
       "summary": "client Python pour YNAB (www.youneedabudget.com)",
       "website": "",
       "githubUrl": "https://github.com/rienafairefr/pynYNAB",
-      "primaryLanguage": "JavaScript",
-      "languages": [
-        "JavaScript",
-        "Shell",
-        "Python",
-        "HTML"
-      ],
+      "primaryLanguage": "",
+      "x-stack": ["python"],
       "libraries": [],
       "images": [],
       "videos": []
     },
     {
-      "name": "openapi-generator",
-      "displayName": "openapi-generator",
-      "summary": "OpenAPI Generator allows generation of API client libraries (SDK generation), server stubs, documentation and configuration automatically given an OpenAPI Spec (v2, v3)",
-      "website": "https://openapi-generator.tech",
-      "githubUrl": "https://github.com/OpenAPITools/openapi-generator",
-      "primaryLanguage": "Java",
-      "languages": [
-        "Dart",
-        "ActionScript",
-        "PHP",
-        "PowerShell",
-        "Ruby",
-        "Rust",
-        "CSS",
-        "JavaScript",
-        "C#",
-        "TypeScript",
-        "Kotlin",
-        "Dockerfile",
-        "Vue",
-        "Shell",
-        "Batchfile",
-        "Java",
-        "HTML",
-        "Scala",
-        "Apex"
+      "x-category": "opensource",
+      "name": "misc.",
+      "displayName": "Divers",
+      "summary": "Contributions diverses en open-source au fil des années",
+      "highlights": [
+        "OpenAPI Generator, ex. génération de clients API à partir d'une spec OpenAPI",
+        "Movinyl, pour générer des images type 'vinyl' à partir d'une vidéo",
+        "TardisBank, pour manager l'argent de poche d'enfants"
       ],
-      "libraries": [],
-      "images": [],
-      "videos": []
-    },
-    {
-      "name": "pulumi",
-      "displayName": "pulumi",
-      "summary": "Pulumi - Modern Infrastructure as Code. Any cloud, any language 🚀",
-      "website": "https://www.pulumi.com",
-      "githubUrl": "https://github.com/pulumi/pulumi",
-      "primaryLanguage": "Go",
-      "languages": [
-        "C#",
-        "Go",
-        "Makefile",
-        "TypeScript",
-        "Shell",
-        "Python",
-        "JavaScript",
-        "PowerShell",
-        "Batchfile",
-        "F#"
-      ],
-      "libraries": [],
-      "images": [],
-      "videos": []
-    },
-    {
-      "name": "cli-tools",
-      "displayName": "cli-tools",
-      "summary": "IoT-LAB CLI tools",
-      "website": "",
-      "githubUrl": "https://github.com/iot-lab/cli-tools",
-      "primaryLanguage": "Python",
-      "languages": [
-        "Python",
-        "Shell"
-      ],
-      "libraries": [],
-      "images": [],
-      "videos": []
+      "x-stack": [
+        "java", "openapi"
+      ]
     }
   ],
+  "x-categories": {
+    "freelance": {"description":  "en tant que freelance"},
+    "employee": {"description":  "en tant qu'employé"},
+    "creation": {"description":  "Créations"},
+    "opensource": {"description":  "Contributions open-source"}
+  },
   "work": [
     {
-      "category": "Freelance",
-      "company": "Whisbee",
-      "position": "founder",
-      "website": "www.whisbee.eu",
+      "x-category": "freelance",
+      "position": "Dévelopeur Full Stack Freelance",
+      "company": "Legitbee",
+      "website": "www.legitbee.com",
       "location": "LILLE",
-      "summary": "Connectez vos banques à votre vie",
+      "summary": "projet de SaaS-ification",
       "isCurrentRole": true,
-      "startDate": "2019-06-01",
-      "endDate": "2020-04-30",
-      "end": {},
+      "startDate": "2021-02",
       "highlights": [
-        "Backend, frontend, devops, bizdev",
-        "Authentication APIs (Oauth2, Auth0)",
-        "OpenAPI",
-        "NoSQL"
+        "Intégration Stripe",
+        "Intégration Open banking",
+        "Stockage crypté"
+      ],
+      "x-stack": [
+        "nodejs", "firebase", "react"
       ]
     },
     {
-      "category": "Freelance",
+      "x-category": "freelance",
+      "position": "Dévelopeur Full Stack Freelance",
+      "company": "TradeIn",
+      "website": "www.tradeinsur.com",
+      "location": "LILLE",
+      "summary": "Projet Open-banking",
+      "isCurrentRole": true,
+      "startDate": "2020-05",
+      "endDate": "2020-07",
+      "highlights": [
+        "Intégration d'API Open banking: Fintecture",
+        "Intégration d'API de comptabilité: Quickbooks"
+      ],
+      "x-stack": [
+        "vuejs", "laravel", "wordpress"
+      ]
+    },
+    {
+      "x-category": "freelance",
+      "position": "Consultant Freelance",
+      "company": "Fintecture",
+      "website": "www.fintecture.com",
+      "summary": "Projet de documentation",
+      "isCurrentRole": true,
+      "startDate": "2020-07",
+      "endDate": "2020-07",
+      "highlights": [
+        "Consulting sur la documentation d'API publique"
+      ],
+      "x-stack": [
+        "openapi"
+      ]
+    },
+    {
+      "x-category": "freelance",
+      "company": "Techshop Lille",
       "position": "Formateur Electronique & découpe laser",
       "website": "",
       "location": "LILLE",
@@ -190,30 +166,25 @@
       ]
     },
     {
-      "category": "Employee",
+      "x-category": "employee",
       "company": "Speech2sense",
       "position": "Dévelopeur en chef Full Stack",
       "website": "www.speech2sense.com",
       "location": "LILLE",
       "summary": "Startup Lilloise développant un assistant vocal à destination des infirmières libérales",
       "isCurrentRole": true,
-      "startDate": "2019-08-18",
-      "x-stack": [
-        "nodejs",
-        "graphql",
-        "flutter"
-      ],
-      "end": {
-        "year": 2019,
-        "month": 6
-      },
+      "startDate": "2020-08",
       "highlights": [
+        "atout.care: App mobile asssistant vocal<br>pour infirmières libérales",
         "Choix architecturaux, création et maintenance de l'infrastructure",
-        "Développements Frontend (mobile) et Backend (API)"
+        "Développement, maintenance de services Python & node.js"
+      ],
+      "x-stack": [
+        "nodejs", "graphql", "flutter", "terraform", "firebase", "kubernetes"
       ]
     },
     {
-      "category": "Employee",
+      "x-category": "employee",
       "company": "INRIA",
       "position": "Développeur Full Stack",
       "website": "www.inria.fr",
@@ -226,10 +197,13 @@
         "Maintenance de l'architecture interne de la plateforme, du frontend, des outils CLI, & APIs",
         "Sysadmin. Déploiement de serveurs",
         "Management de stagiaires Master 2"
+      ],
+      "x-stack": [
+        "python", "vuejs"
       ]
     },
     {
-      "category": "Employee",
+      "x-category": "employee",
       "company": "CNRS",
       "position": "Ingénieur recherche",
       "website": "www.cnrs.fr",
@@ -240,10 +214,13 @@
       "endDate": "2017-09",
       "highlights": [
         "Développement d'interface pour la machine: WPF .NET, postprocesseurs AlphaCAM, génération de G-code"
+      ],
+      "x-stack": [
+        "csharp"
       ]
     },
     {
-      "category": "Employee",
+      "x-category": "employee",
       "company": "CEA-LETI (Grenoble) & EPFL (Lausanne)",
       "position": "Assistant Recherche (doctorant)",
       "website": "",
@@ -252,21 +229,12 @@
       "isCurrentRole": false,
       "startDate": "2010-01-01",
       "endDate": "2013-07-01",
-      "start": {
-        "year": 2010,
-        "month": 1
-      },
-      "end": {
-        "year": 2013,
-        "month": 7
-      },
       "highlights": [
         "Développé des outils de collection données, processing de données pour l'instrumentation.",
         "Excel VBA, Matlab, Comsol. Technology CAD (TCAD) (Silvaco ATLAS)"
       ]
     }
   ],
-  "publications": [],
   "education": [
     {
       "institution": "INPG Phelma, Grenoble",
@@ -287,8 +255,6 @@
       "endDate": "2009-09"
     }
   ],
-  "volunteer": [],
-  "awards": [],
   "languages": [
     {
       "language": "Anglais",
@@ -298,7 +264,5 @@
       "language": "Français",
       "fluency": "Langue maternelle"
     }
-  ],
-  "interests": [],
-  "references": []
+  ]
 }

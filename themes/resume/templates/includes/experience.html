@@ -2,31 +2,41 @@
 <section class="section experiences-section">
     <h2 class="section-title"><i class="fa fa-briefcase"></i>Experiences</h2>
     {% for category in RESUME.work_by_category %}
-        <h3 class="subsection-title section-title"><i class="fa fa-list"></i>{{ RESUME['x-work-categories'][category]['description'] }}</h3>
+        <h3 class="subsection-title section-title"><i class="fa fa-list"></i>{{ RESUME['x-categories'][category]['description'] }}</h3>
         {% for experience in RESUME.work_by_category[category] %}
-            <div class="item">
-                <div class="meta">
-                    <div class="upper-row">
-                        <h3 class="job-title">{{ experience['position'] }}</h3>
-                        <div class="time">{{ experience.startDate.split('-')[0] }}/{{ experience.startDate.split('-')[1] }} - {%if experience.endDate %}{{ experience.endDate.split('-')[0] }}/{{ experience.endDate.split('-')[1] }}{% endif %}</div>
-                    </div><!--//upper-row-->
-                    <div class="company">{{ experience['company'] }}</div>
-                </div><!--//meta-->
-                <div class="details">
+        <div class="item">
+            <div class="meta">
+                <div class="upper-row">
+                    <h3 class="job-title">{{ experience['position'] }}</h3>
+                    <div class="time">{{ experience.startDate.split('-')[0] }}/{{ experience.startDate.split('-')[1] }} - {%if experience.endDate %}{{ experience.endDate.split('-')[0] }}/{{ experience.endDate.split('-')[1] }}{% endif %}</div>
+                </div><!--//upper-row-->
+                <div class="company">
+                    {% if experience.website %}
+                        <a href="{{ experience.website }}">{{ experience.company }}</a>
+                    {% else %}
+                        {{ experience.company }}
+                    {% endif %}
+                </div>
+            </div><!--//meta-->
+            <div class="details">
+                <div>
                     <p>{{ experience['summary'] }}</p>
                     <ul>
                         {% for highlight in experience.highlights %}
                         <li>{{ highlight }}</li>
                         {% endfor %}
                     </ul>
-                </div><!--//details-->
+                </div>
+                {% if experience["x-stack"] %}
                 <div class="stack">
                     {% for stack in experience["x-stack"] %}
-                        <i class="devicon-{{ stack }}-plain-wordmark colored"></i>
+                        {{ stack.icon }}
                     {% endfor %}
                 </div>
+                {% endif %}
+            </div><!--//details-->
 
-            </div><!--//item-->
+        </div><!--//item-->
         {% endfor %}
     {% endfor %}
 </section><!--//section-->

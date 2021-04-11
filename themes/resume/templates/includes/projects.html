@@ -1,13 +1,34 @@
 {% if RESUME.projects %}
 <section class="section projects-section">
-    <h2 class="section-title"><i class="fa fa-archive"></i><span lang="en">Projects</span><span lang="fr">Projets</span></h2>
-    <div class="intro">
-        <p>{{ PROJECT_INTRO }}</p>
-    </div><!--//intro-->
-    {% for project in PROJECTS %}
-        <div class="item">
-            <span class="project-title">{{ project['title'] }}</span> - <span class="project-tagline">{{ project['tagline'] }}</span>
-        </div><!--//item-->
+    <h2 class="section-title"><i class="fa fa-list"></i><span lang="en">Projects</span><span lang="fr">Projets</span></h2>
+    {% for category in RESUME.projects_by_category %}
+        <h3 class="subsection-title section-title">{{ RESUME['x-categories'][category].get('icon', '<i class="fa fa-list"></i>') }}{{ RESUME['x-categories'][category]['description'] }}</h3>
+        {% for project in RESUME.projects_by_category[category] %}
+            <div class="item">
+                <div class="details">
+                    <div>
+                        <h1 class="project-title">{{ project.displayName }}
+                            {% if project.githubUrl %}
+                                <a href="{{ project.githubUrl }}"><i class="fa fa-github"></i></a>
+                            {% endif %}
+                        </h1>
+                        <p>{{ project.summary }}</p>
+                        <ul>
+                            {% for highlight in project.highlights %}
+                            <li>{{ highlight }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% if project["x-stack"] %}
+                    <div class="stack">
+                        {% for stack in project["x-stack"] %}
+                            {{ stack.icon }}
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+            </div><!--//item-->
+        {% endfor %}
     {% endfor %}
 </section><!--//section-->
 {% endif %}
