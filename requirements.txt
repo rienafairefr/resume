@@ -1,3 +1,4 @@
 pelican[Markdown]==4.2.0
 invoke
 livereload
+ghp-import
