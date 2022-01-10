@@ -42,6 +42,9 @@
     },
     "skills": [
         {
+            "x-stack": [
+                "python"
+            ],
             "name": "Python",
             "en_level": "Advanced",
             "fr_level": "Avancé",
@@ -52,6 +55,9 @@
             "fr_x-details": "création d'outils CLI, d'APIs, scripts, scraping, etc..."
         },
         {
+            "x-stack": [
+                "javascript"
+            ],
             "name": "Javascript",
             "en_level": "Intermediate",
             "fr_level": "Intermédiaire",
@@ -62,6 +68,9 @@
             "fr_x-details": "Création, maintenance et modification de sites Vue.js & React.js. Création, maintenance et modification d'APIs node.js "
         },
         {
+            "x-stack": [
+                "linux"
+            ],
             "name": "Sysadmin & devops",
             "en_level": "Advanced",
             "fr_level": "Avancé",
@@ -72,6 +81,9 @@
             "fr_x-details": "Maintenu, mis à jour plusieurs serveurs, personel & professionel, utilisation avancée de Docker, utilisation IaC (terraform, pulumi), Kubernetes"
         },
         {
+            "x-stack": [
+                "php"
+            ],
             "name": "PHP",
             "fr_level": "Intermédiaire",
             "en_level": "Intermediate",
@@ -99,9 +111,10 @@
         {
             "x-category": "opensource",
             "name": "misc.",
-            "displayName": "Divers",
+            "fr_displayName": "Divers",
+            "en_displayName": "Various",
             "fr_summary": "Contributions diverses en open-source au fil des années",
-            "en_summary": "Various open-source contributions along the years",
+            "en_summary": "Open-source contributions along the years",
             "fr_highlights": [
                 "OpenAPI Generator, ex. génération de clients API à partir d'une spec OpenAPI",
                 "Movinyl, pour générer des images type 'vinyl' à partir d'une vidéo",
@@ -109,6 +122,7 @@
             ],
             "en_highlights": [
                 "e.g. OpenAPI Generator, generating API clients from OpenAPI spec",
+                "various bug/issues raised,",
                 "terraform providers"
             ],
             "x-stack": [
@@ -170,14 +184,13 @@
             "startDate": "2021-09",
             "endDate": "2021-12",
             "highlights": [
-                "Stripe integration",
-                "Open banking integration",
-                "Encrypted storage"
+                "Infrastructure as code - devops"
             ],
             "x-stack": [
                 "nodejs",
                 "firebase",
-                "react"
+                "react",
+                "pulumi"
             ]
         },
         {
@@ -239,7 +252,7 @@
                 "Revue de documentation d'API publique"
             ],
             "x-stack": [
-                "OpenAPI"
+                "openapi"
             ]
         },
         {
@@ -253,11 +266,14 @@
             "fr_summary": "Connectez vos banques à votre vie",
             "startDate": "2019-06",
             "endDate": "2020-04",
+            "x-stack": [
+                "python",
+                "vuejs",
+                "openapi"
+            ],
             "en_highlights": [
                 "Backend, frontend, devops, bizdev",
-                "Authentication APIs (Oauth2, Auth0)",
-                "OpenAPI",
-                "NoSQL"
+                "Authentication APIs (Oauth2, Auth0)"
             ]
         },
         {
@@ -322,6 +338,11 @@
             "fr_summary": "Partie d'une équipe full-remote de 5 ingénieurs s'occupant de FIT Iot-LAB <br><a href=\"https://  www.iot-lab.info\">www.iot-lab.info</a>",
             "startDate": "2017-06-01",
             "endDate": "2019-06-01",
+            "x-stack": [
+                "java",
+                "vuejs",
+                "python"
+            ],
             "en_highlights": [
                 "Maintenance of the platform\\'s backend, frontend code, CLI-tools, APIs",
                 "Sysadmin. Deployments of servers",

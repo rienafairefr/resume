@@ -1,20 +1,24 @@
 {% if RESUME.skills %}
 <section class="skills-section section">
-    <h2 class="section-title"><i class="fa fa-rocket"></i><span lang="en">Skills &amp; Proficiency</span><span lang="fr">Connaissances &amp; Niveau</span></h2>
-    <div class="skillset">
-        {% for skill in RESUME.skills %}
-            <div class="item">
-                <div class="upper-row">
-                    <h4>{{ skill['name' ]}}</h4>
-                </div>
-                <p>
-                    {{skill['level']}}
-                </p>
-                <p>
-                    {{skill['x-details']}}
-                </p>
-            </div><!--//item-->
-        {% endfor %}
-    </div>  
-</section><!--//skills-section-->
+  <h2 class="section-title">
+    <i class="fa fa-rocket"></i><span lang="en">Skills &amp; Proficiency</span
+    ><span lang="fr">Connaissances &amp; Niveau</span>
+  </h2>
+  <div class="skillset">
+    {% for skill in RESUME.skills %}
+    <div class="item">
+      <div class="upper-row">
+        <h4>
+          {% if skill["x-stack"] %} {% for stack in skill["x-stack"] %} {{
+          stack.icon }} {% endfor %} {% endif %} {{ skill['name' ]}}
+        </h4>
+      </div>
+      <p>{{skill['level']}}</p>
+      <p>{{skill['x-details']}}</p>
+    </div>
+    <!--//item-->
+    {% endfor %}
+  </div>
+</section>
+<!--//skills-section-->
 {% endif%}

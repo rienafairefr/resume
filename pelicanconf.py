@@ -54,6 +54,8 @@ PLUGINS = ['i18n_subsites']
 ICONS = {
             "graphql": open('themes/resume/static/images/graphql.svg').read().replace('<svg', '<svg width=45'),
             "openapi": open('themes/resume/static/images/openapi.svg').read().replace('<svg', '<svg width=45'),
+            "terraform": open('themes/resume/static/images/terraform.svg').read().replace('<svg', '<svg width=45'),
+            "pulumi": open('themes/resume/static/images/pulumi.svg').read().replace('<svg', '<svg width=45'),
             "open-source": open('themes/resume/static/images/open-source.svg').read().replace('<svg', '<svg width=45')
         }
 
@@ -66,18 +68,18 @@ def get_data(lang):
         if resume['basics']['x-emails']:
             resume['basics']['x-emails'] = [obfuscate_string(e) for e  in resume['basics']['x-emails']]
         resume['basics']['phone'] = obfuscate_string(resume['basics']['phone'])
-
-        for key in 'work', 'projects':
+        def get_wordmark(w):
+            if w in ['javascript', 'd3js', 'linux', 'php', 'flutter']:
+                return False
+            
+            return True
+        for key in 'work', 'projects', 'skills':
             kc = f"{key}_by_category"
             resume[kc] = {}
             for item in resume.get(key, []):
-                resume[kc].setdefault(item['x-category'], []).append(item)
-            for item in resume.get(key, []):
+                if 'x-category' in item:
+                    resume[kc].setdefault(item['x-category'], []).append(item)
                 if 'x-stack' in item:
-                    def get_wordmark(w):
-                        if w == 'd3js':
-                            return False
-                        return True
                     item['x-stack'] = [
                         {
                             "icon": ICONS.get(stack, f"<i class =\"devicon-{stack}-plain{'-wordmark' if get_wordmark(stack) else ''}\"></i>")

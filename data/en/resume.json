@@ -39,6 +39,9 @@
   },
   "skills": [
     {
+      "x-stack": [
+        "python"
+      ],
       "name": "Python",
       "level": "Advanced",
       "rating": 4,
@@ -47,6 +50,9 @@
       "x-details": "creating CLI-tools, backend APIs, one-off scripts, scraping, etc..."
     },
     {
+      "x-stack": [
+        "javascript"
+      ],
       "name": "Javascript",
       "level": "Intermediate",
       "rating": 3,
@@ -55,6 +61,9 @@
       "x-details": "Modified & maintained Vue.js, React.js sites. Modified, maintained & created node.js APIs"
     },
     {
+      "x-stack": [
+        "linux"
+      ],
       "name": "Sysadmin & devops",
       "level": "Advanced",
       "rating": 4,
@@ -63,6 +72,9 @@
       "x-details": "Maintained multiple servers, personal & work, heavily using Docker containers, using IaC (terraform, pulumi), Kubernetes"
     },
     {
+      "x-stack": [
+        "php"
+      ],
       "name": "PHP",
       "level": "Intermediate",
       "rating": 2,
@@ -87,10 +99,11 @@
     {
       "x-category": "opensource",
       "name": "misc.",
-      "displayName": "Divers",
-      "summary": "Various open-source contributions along the years",
+      "displayName": "Various",
+      "summary": "Open-source contributions along the years",
       "highlights": [
         "e.g. OpenAPI Generator, generating API clients from OpenAPI spec",
+        "various bug/issues raised,",
         "terraform providers"
       ],
       "x-stack": [
@@ -144,14 +157,13 @@
       "startDate": "2021-09",
       "endDate": "2021-12",
       "highlights": [
-        "Stripe integration",
-        "Open banking integration",
-        "Encrypted storage"
+        "Infrastructure as code - devops"
       ],
       "x-stack": [
         "nodejs",
         "firebase",
-        "react"
+        "react",
+        "pulumi"
       ]
     },
     {
@@ -203,7 +215,7 @@
         "Consulting on Public API Documentation"
       ],
       "x-stack": [
-        "OpenAPI"
+        "openapi"
       ]
     },
     {
@@ -215,11 +227,14 @@
       "summary": "Connecting your banks to your life",
       "startDate": "2019-06",
       "endDate": "2020-04",
+      "x-stack": [
+        "python",
+        "vuejs",
+        "openapi"
+      ],
       "highlights": [
         "Backend, frontend, devops, bizdev",
-        "Authentication APIs (Oauth2, Auth0)",
-        "OpenAPI",
-        "NoSQL"
+        "Authentication APIs (Oauth2, Auth0)"
       ]
     },
     {
@@ -268,6 +283,11 @@
       "summary": "Part of a remote team of 5 engineers at FIT Iot-LAB <br><a href=\"https://  www.iot-lab.info\">www.iot-lab.info</a>",
       "startDate": "2017-06-01",
       "endDate": "2019-06-01",
+      "x-stack": [
+        "java",
+        "vuejs",
+        "python"
+      ],
       "highlights": [
         "Maintenance of the platform\\'s backend, frontend code, CLI-tools, APIs",
         "Sysadmin. Deployments of servers",
