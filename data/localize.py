@@ -2,7 +2,7 @@ import json
 import copy
 import os
 import collections
-
+import click
 
 class Localizer:
     def __init__(self, resume_filepath):
@@ -52,14 +52,17 @@ class Localizer:
         with open(output_filepath, "w") as outfile:
             json.dump(localized_resume, outfile, indent=2, ensure_ascii=False)
 
-
 def change_key(dictionary, old, new):
     for _ in range(len(dictionary)):
         k, v = dictionary.popitem(False)  # pop first item
         dictionary[new if old == k else k] = v
 
-
+@click.group()
 def main():
+    pass
+
+@main.command()
+def localize():
     localizer = Localizer('resume.json')
     localizer.localize()
 

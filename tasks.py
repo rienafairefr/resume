@@ -9,6 +9,8 @@ from pathlib import Path
 from invoke import task, Collection
 from pelican.server import ComplexHTTPRequestHandler, RootedHTTPServer
 from pelican.settings import DEFAULT_CONFIG, get_settings_from_file
+from data.localize import Localizer
+import contextlib
 
 SETTINGS_FILE_BASE = 'pelicanconf.py'
 SETTINGS = {}
@@ -79,6 +81,22 @@ def preview(c):
     c.run('pelican {input_path} -s {settings_publish} -o {deploy_path}'.format(**CONFIG), echo=True)
 
 
+@contextlib.contextmanager
+def remember_cwd():
+    curdir= os.getcwd()
+    try: yield
+    finally: os.chdir(curdir)
+
+
+@task
+def localize(c):
+    with remember_cwd():
+        os.chdir('data')
+        localizer = Localizer('resume.json')
+        localizer.localize()
+
+
+
 @task
 def livereload(c):
     """Automatically reload browser tab upon file modification."""
@@ -97,8 +115,9 @@ def livereload(c):
     for path in Path(theme_path).rglob('*.*'):
         server.watch(str(path), lambda: build(c))
     # Watch data path
-    for path in Path('data').rglob('*.*'):
-        server.watch(str(path), lambda: build(c))
+    server.watch('data/resume.json', lambda: localize(c))
+    for lang in SETTINGS['I18N_SUBSITES']:
+        server.watch(f'data/{lang}/resume.json', lambda: build(c))
     # Serve output path on configured port
     server.serve(port=CONFIG['port'], root=CONFIG['deploy_path'], debug=SETTINGS.get('DEBUG', False))
 
