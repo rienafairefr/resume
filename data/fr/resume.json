@@ -101,13 +101,32 @@
   "work": [
     {
       "x-category": "freelance",
-      "position": "Dévelopeur Full Stack Freelance",
+      "position": "Développeur Lead Full Stack",
+      "company": "Legitbee",
+      "website": "www.legitbee.com",
+      "location": "LILLE",
+      "summary": "intérim départ CTO",
+      "isCurrentRole": true,
+      "startDate": "2021-10",
+      "endDate": "2021-12",
+      "highlights": [
+        "devops - Infrastructure as Code",
+        "Authentification forte (2FA, France Connect)"
+      ],
+      "x-stack": [
+        "nodejs", "firebase", "react"
+      ]
+    },
+    {
+      "x-category": "freelance",
+      "position": "Développeur Full Stack",
       "company": "Legitbee",
       "website": "www.legitbee.com",
       "location": "LILLE",
       "summary": "projet de SaaS-ification",
       "isCurrentRole": true,
       "startDate": "2021-02",
+      "endDate": "2021-10",
       "highlights": [
         "Intégration Stripe",
         "Intégration Open banking",
@@ -119,7 +138,7 @@
     },
     {
       "x-category": "freelance",
-      "position": "Dévelopeur Full Stack Freelance",
+      "position": "Développeur Full Stack",
       "company": "TradeIn",
       "website": "www.tradeinsur.com",
       "location": "LILLE",
@@ -160,7 +179,9 @@
       "summary": "Ecriture de cours, formation en petits groupes sur la manipulation et devenir indépendant sur les équipements",
       "isCurrentRole": true,
       "startDate": "2017-06",
+      "endDate": "2020-06",
       "highlights": [
+        "Programmation Arduino",
         "Machines de découpe laser (Trotec)",
         "Laboratoire électronique (soudure, Conception & Fabrication de PCB)"
       ]
@@ -168,12 +189,13 @@
     {
       "x-category": "employee",
       "company": "Speech2sense",
-      "position": "Dévelopeur en chef Full Stack",
+      "position": "Développeur Lead Full Stack",
       "website": "www.speech2sense.com",
       "location": "LILLE",
       "summary": "Startup Lilloise développant un assistant vocal à destination des infirmières libérales",
       "isCurrentRole": true,
       "startDate": "2020-08",
+      "endDate": "2021-10",
       "highlights": [
         "atout.care: App mobile asssistant vocal<br>pour infirmières libérales",
         "Choix architecturaux, création et maintenance de l'infrastructure",

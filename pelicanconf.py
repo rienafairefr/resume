@@ -14,7 +14,7 @@ AUTHOR = 'Matthieu Berthomé'
 SITENAME = 'Matthieu Berthomé'
 SITEURL = ''
 
-PATH = 'content'
+PATH = '.'
 
 TIMEZONE = 'Europe/Paris'
 
