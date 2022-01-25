@@ -9,3 +9,4 @@ __pycache__
 output
 infos\.tex
 .history
+node_modules

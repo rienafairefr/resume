@@ -10,12 +10,18 @@
     "yearsOfExperience": null,
     "id": "f4f1b8b0-a0d1-4de4-8d20-35cb012e53b2",
     "x-emails": [
-      "matthieu@mmea.fr",
-      "matthieu@whisbee.eu"
+      {
+        "email": "matthieu@mmea.fr",
+        "label": "perso"
+      },
+      {
+        "email": "matthieu@whisbee.eu",
+        "label": "pro"
+      }
     ],
-    "region": "LILLE",
+    "region": "RENNES",
     "location": {
-      "city": "Lille",
+      "city": "Rennes",
       "countryCode": "FR"
     },
     "phone": "06 09 63 43 87",

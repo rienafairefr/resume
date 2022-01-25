@@ -66,7 +66,13 @@ def get_data(lang):
         if 'email' in resume['basics']:
             resume['basics']['email'] = obfuscate_string(resume['basics']['email'])
         if resume['basics']['x-emails']:
-            resume['basics']['x-emails'] = [obfuscate_string(e) for e  in resume['basics']['x-emails']]
+            _emails = []
+            for e in resume['basics']['x-emails']:
+                if isinstance(e, dict):
+                    _emails.append({ **e, "email": obfuscate_string(e['email']) })
+                else:
+                    _emails.append(obfuscate_string(e))
+            resume['basics']['x-emails'] = _emails
         resume['basics']['phone'] = obfuscate_string(resume['basics']['phone'])
         def get_wordmark(w):
             if w in ['javascript', 'd3js', 'linux', 'php', 'flutter']:

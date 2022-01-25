@@ -1,40 +1,61 @@
-<!-- Use icons from fontawesome when you are adding new item in the contact list  -->             
- 
+<!-- Use icons from fontawesome when you are adding new item in the contact list  -->
+
 <div class="sidebar-wrapper">
-    <div class="profile-container">
-        <img class="profile-img" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/{% if PIC %}{{ PIC }}{% else %}profile.png{% endif %}" alt="profile picture" />
-        <h1 class="name">{% if RESUME.basics.name %}{{RESUME.basics.name}}{% else %}Alan Doe{% endif %}</h1>
-        <h3 class="tagline">{% if RESUME.basics.headline %}{{RESUME.basics.headline}}{% else %}Developper{% endif %}</h3>
-    </div><!--//profile-container-->
-    
-    <div class="contact-container container-block">
-        <ul class="list-unstyled contact-list">
-           
-            {% if RESUME.basics.email %}
-            <li class="email"><i class="fa fa-envelope"></i><a href="mailto: {{RESUME.basics.email}}">{{RESUME.basics.email}}</a></li>
-            {% endif %}
-            {% if RESUME.basics['x-emails'] %}
-            {% for email in RESUME.basics['x-emails'] %}
-            <li class="email"><i class="fa fa-envelope"></i><a href="mailto: {{email}}">{{email}}</a></li>
-            {% endfor %}
-            {% endif %}
-            
-            {% if RESUME.basics.phone %}
-            <li class="phone"><i class="fa fa-phone"></i><a href="tel:{{RESUME.basics.phone}}">{{RESUME.basics.phone}}</a></li>
-            {% endif %}
-            
-            {% if RESUME.basics.website %}
-            <li class="website"><i class="fa fa-globe"></i><a href="http://{{RESUME.basics.website}}" target="_blank">{{RESUME.basics.website}}</a></li>
-            {% endif %}
+  <div class="profile-container">
+    <img
+      class="profile-img"
+      src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/{% if PIC %}{{ PIC }}{% else %}profile.png{% endif %}"
+      alt="profile picture"
+    />
+    <h1 class="name">
+      {% if RESUME.basics.name %}{{RESUME.basics.name}}{% else %}Alan Doe{%
+      endif %}
+    </h1>
+    <h3 class="tagline">
+      {% if RESUME.basics.headline %}{{RESUME.basics.headline}}{% else
+      %}Developper{% endif %}
+    </h3>
+    <h3 class="tagline">
+      <i class="fa fa-fw fa-map-marker"></i>{{RESUME.basics.location.city}}
+    </h3>
+  </div>
+  <!--//profile-container-->
 
-            {% for profile in RESUME.basics.profiles %}
-            <li class="{{ profile.network|lower }}"><i class="fa fa-{{ profile.network|lower }}"></i><a href="{{profile.url}}" target="_blank">{{profile.username}}</a></li>
-            {% endfor %}
-            
-        </ul>
-    </div><!--//contact-container-->
-   {% include 'includes/education.html' %}
-   {% include 'includes/language.html' %}
-   {% include 'includes/interests.html' %}
-
-</div><!--//sidebar-wrapper-->
+  <div class="contact-container container-block">
+    <ul class="list-unstyled contact-list">
+      {% if RESUME.basics.email %}
+      <li class="email">
+        <i class="fa fa-envelope"></i
+        ><a href="mailto: {{RESUME.basics.email}}">{{RESUME.basics.email}}</a>
+      </li>
+      {% endif %} {% if RESUME.basics['x-emails'] %} {% for obj in
+      RESUME.basics['x-emails'] %}
+      <li class="email">
+        <i class="fa fa-envelope"></i
+        ><a href="mailto: {{obj.email}}">{{obj.email}}</a> ({{obj.label}})
+      </li>
+      {% endfor %} {% endif %} {% if RESUME.basics.phone %}
+      <li class="phone">
+        <i class="fa fa-phone"></i
+        ><a href="tel:{{RESUME.basics.phone}}">{{RESUME.basics.phone}}</a>
+      </li>
+      {% endif %} {% if RESUME.basics.website %}
+      <li class="website">
+        <i class="fa fa-globe"></i
+        ><a href="http://{{RESUME.basics.website}}" target="_blank"
+          >{{RESUME.basics.website}}</a
+        >
+      </li>
+      {% endif %} {% for profile in RESUME.basics.profiles %}
+      <li class="{{ profile.network|lower }}">
+        <i class="fa fa-{{ profile.network|lower }}"></i
+        ><a href="{{profile.url}}" target="_blank">{{profile.username}}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <!--//contact-container-->
+  {% include 'includes/education.html' %} {% include 'includes/language.html' %}
+  {% include 'includes/interests.html' %}
+</div>
+<!--//sidebar-wrapper-->
