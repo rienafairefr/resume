@@ -3,22 +3,13 @@
     "name": "Matthieu Berthomé",
     "picture": "https://avatars2.githubusercontent.com/u/758517?v=4",
     "label": "",
-    "headline": "Full-Stack Developer",
-    "summary": "Multi-faceted Engineer, <br><i class=\"fa fa-heart\"></i> building projects, and helping others build their projects",
+    "headline": "Full-Stack Devops",
+    "summary": "Multi-faceted Engineer, from the electrons to the Cloud <br><i class=\"fa fa-heart\"></i> building projects, and helping others build their projects",
     "website": null,
     "blog": null,
     "yearsOfExperience": null,
     "id": "f4f1b8b0-a0d1-4de4-8d20-35cb012e53b2",
-    "x-emails": [
-      {
-        "email": "matthieu@mmea.fr",
-        "label": "perso"
-      },
-      {
-        "email": "matthieu@whisbee.eu",
-        "label": "pro"
-      }
-    ],
+    "x-emails": ["matthieu@whisbee.eu"],
     "region": "RENNES",
     "location": {
       "city": "Rennes",
@@ -35,11 +26,6 @@
         "network": "LinkedIn",
         "url": "https://www.linkedin.com/in/matthieu-berthomé",
         "username": "matthieu-berthomé"
-      },
-      {
-        "network": "Twitter",
-        "url": "https://twitter.com/m_berthome",
-        "username": "m_berthome"
       }
     ]
   },
@@ -50,8 +36,8 @@
       ],
       "name": "Python",
       "level": "Advanced",
-      "rating": 4,
-      "yearsOfExperience": 2,
+      "rating": 5,
+      "yearsOfExperience": 10,
       "keywords": [],
       "x-details": "creating CLI-tools, backend APIs, one-off scripts, scraping, etc..."
     },
@@ -73,20 +59,11 @@
       "name": "Sysadmin & devops",
       "level": "Advanced",
       "rating": 4,
-      "yearsOfExperience": 5,
-      "keywords": [],
-      "x-details": "Maintained multiple servers, personal & work, heavily using Docker containers, using IaC (terraform, pulumi), Kubernetes"
-    },
-    {
-      "x-stack": [
-        "php"
+      "yearsOfExperience": 8,
+      "keywords": [
+        "Ansible", "Terraform", "OpenStack", "Vmware"
       ],
-      "name": "PHP",
-      "level": "Intermediate",
-      "rating": 2,
-      "yearsOfExperience": 1,
-      "keywords": [],
-      "x-details": "OOP PHP (Laravel), old-scool PHP (wordpress & OAR scheduler)"
+      "x-details": "Maintained multiple servers, personal & work, heavily using Docker containers, using IaC (terraform, pulumi) & Kubernetes"
     }
   ],
   "projects": [

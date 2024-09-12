@@ -414,3 +414,15 @@ used for profile image
   position: relative;
   top: -2px;
 }
+
+.pill {
+  background-color: #f0f0f0;
+  border: none;
+  color: black;
+  padding: 2px 6px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 2px 2px;
+  border-radius: 20px;
+}

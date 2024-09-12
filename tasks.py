@@ -6,7 +6,7 @@ import sys
 import datetime
 
 from pathlib import Path
-from invoke import task, Collection
+from invoke import task
 from pelican.server import ComplexHTTPRequestHandler, RootedHTTPServer
 from pelican.settings import DEFAULT_CONFIG, get_settings_from_file
 from data.localize import Localizer

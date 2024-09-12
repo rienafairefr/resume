@@ -26,14 +26,12 @@
                         <li>{{ highlight }}</li>
                         {% endfor %}
                     </ul>
+                    {% if experience["x-stack"] %}
+                        {% for stack in experience["x-stack"] %}
+                            <span class="pill">{{ stack['name'] }}</span>
+                        {% endfor %}
+                    {% endif %}
                 </div>
-                {% if experience["x-stack"] %}
-                <div class="stack">
-                    {% for stack in experience["x-stack"] %}
-                        {{ stack.icon }}
-                    {% endfor %}
-                </div>
-                {% endif %}
             </div><!--//details-->
 
         </div><!--//item-->

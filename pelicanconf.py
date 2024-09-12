@@ -86,12 +86,19 @@ def get_data(lang):
                 if 'x-category' in item:
                     resume[kc].setdefault(item['x-category'], []).append(item)
                 if 'x-stack' in item:
-                    item['x-stack'] = [
-                        {
-                            "icon": ICONS.get(stack, f"<i class =\"devicon-{stack}-plain{'-wordmark' if get_wordmark(stack) else ''}\"></i>")
-                        } for stack in
-                        item['x-stack']
-                    ]
+                    def get_wordmark(w):
+                        if w == 'd3js':
+                            return False
+                        return True
+
+                    for i, stack in enumerate(item['x-stack']):
+                        stack2 = stack.replace('.', '').lower()
+                        item['x-stack'][i] = {
+                            "icon": ICONS.get(stack2,
+                                              f"<i class =\"devicon-{stack2}-plain{'-wordmark' if get_wordmark(stack2) else ''}\"></i>"),
+                            "name": stack
+                        }
+
         return resume
 
 
@@ -109,12 +116,11 @@ I18N_SUBSITES = {
 }
 
 JINJA_ENVIRONMENT = {
-  'extensions': ['jinja2.ext.i18n']
+    'extensions': ['jinja2.ext.i18n']
 }
 I18N_GETTEXT_NEWSTYLE = True
 
 RESUME = get_data('en')
-
 
 PROJECT_INTRO = "<span lang=\"en\">Open-source contributions</span><span lang=\"fr\">Contributions open-source</span>"
 
