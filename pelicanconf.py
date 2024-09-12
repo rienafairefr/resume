@@ -52,13 +52,23 @@ PLUGIN_PATHS = [os.path.expanduser('~/pelican-plugins')]
 PLUGINS = ['i18n_subsites']
 
 ICONS = {
-    "graphql": open('themes/resume/static/images/graphql.svg').read().replace('<svg', '<svg height=45'),
-    "openapi": open('themes/resume/static/images/openapi.svg').read().replace('<svg', '<svg height=45'),
-    "terraform": open('themes/resume/static/images/terraform.svg').read().replace('<svg', '<svg height=45'),
-    "pulumi": open('themes/resume/static/images/pulumi.svg').read().replace('<svg', '<svg height=45'),
-    "linux": open('themes/resume/static/images/linux.svg').read().replace('<svg', '<svg height=45'),
-    "open-source": open('themes/resume/static/images/open-source.svg').read().replace('<svg', '<svg height=45')
+    "graphql": open('themes/resume/static/images/graphql.svg').read(),
+    "openapi": open('themes/resume/static/images/openapi.svg').read(),
+    "sql": open('themes/resume/static/images/sql.svg').read(),
+    "terraform": open('themes/resume/static/images/terraform.svg').read(),
+    "pulumi": open('themes/resume/static/images/pulumi.svg').read(),
+    "linux": open('themes/resume/static/images/linux.svg').read(),
+    "open-source": open('themes/resume/static/images/open-source.svg').read()
 }
+
+
+def get_icon(name, width=None, height=None):
+    icon = ICONS.get(name)
+    if name in ICONS:
+        if width is not None:
+            return icon.replace('<svg', f'<svg width={width}')
+        elif height is not None:
+            return icon.replace('<svg', f'<svg height={height}')
 
 
 def get_data(lang):
@@ -79,7 +89,7 @@ def get_data(lang):
             resume['basics']['x-emails'] = _emails
         resume['basics']['phone'] = obfuscate_string(resume['basics']['phone'])
 
-        for key in 'work', 'projects', 'skills':
+        for key in 'work', 'projects':
             kc = f"{key}_by_category"
             resume[kc] = {}
             for item in resume.get(key, []):
@@ -87,17 +97,35 @@ def get_data(lang):
                     resume[kc].setdefault(item['x-category'], []).append(item)
                 if 'x-stack' in item:
                     def get_wordmark(w):
-                        if w == 'd3js':
+                        if w in ('d3js', 'python', 'javascript'):
                             return False
                         return True
 
                     for i, stack in enumerate(item['x-stack']):
                         stack2 = stack.replace('.', '').lower()
+                        stack_icon = get_icon(stack2, height=45)
+                        if stack_icon is None:
+                            wm = '-wordmark' if get_wordmark(stack2) else ''
+                            stack_icon = f'<i style="font-size: 45px;" class="devicon-{stack2}-plain{wm}"></i>'
                         item['x-stack'][i] = {
-                            "icon": ICONS.get(stack2,
-                                              f"<i class =\"devicon-{stack2}-plain{'-wordmark' if get_wordmark(stack2) else ''}\"></i>"),
+                            "icon": stack_icon,
                             "name": stack
                         }
+
+        def get_wordmark_skill(w):
+            if w in ('d3js', 'python', 'javascript', 'php', 'sql'):
+                return False
+            return True
+        for item in resume['skills']:
+            stack2 = item['x-icon']
+            stack_icon = get_icon(item['x-icon'], height=32)
+            if stack_icon is None:
+                wm = '-wordmark' if get_wordmark_skill(stack2) else ''
+                stack_icon = f'<i style="font-size: 32px;" class="devicon-{stack2}-plain{wm}"></i>'
+            item['x-icon'] = {
+                "icon": stack_icon,
+                "name": stack
+            }
 
         return resume
 

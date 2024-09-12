@@ -18,14 +18,12 @@
                             <li>{{ highlight }}</li>
                             {% endfor %}
                         </ul>
+                        {% if project["x-stack"] %}
+                            {% for stack in project["x-stack"] %}
+                                {{ stack.icon }}
+                            {% endfor %}
+                        {% endif %}
                     </div>
-                    {% if project["x-stack"] %}
-                    <div class="stack">
-                        {% for stack in project["x-stack"] %}
-                            {{ stack.icon }}
-                        {% endfor %}
-                    </div>
-                    {% endif %}
                 </div>
             </div><!--//item-->
         {% endfor %}
