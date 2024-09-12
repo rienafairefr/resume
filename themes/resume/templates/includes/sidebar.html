@@ -25,14 +25,18 @@
     <ul class="list-unstyled contact-list">
       {% if RESUME.basics.email %}
       <li class="email">
-        <i class="fa fa-envelope"></i
-        ><a href="mailto: {{RESUME.basics.email}}">{{RESUME.basics.email}}</a>
+        <i class="fa fa-envelope"></i>
+        <a href="mailto:{{RESUME.basics.email}}">{{ RESUME.basics.email }}</a>
       </li>
       {% endif %} {% if RESUME.basics['x-emails'] %} {% for obj in
       RESUME.basics['x-emails'] %}
       <li class="email">
-        <i class="fa fa-envelope"></i
-        ><a href="mailto: {{obj.email}}">{{obj.email}}</a> ({{obj.label}})
+        <i class="fa fa-envelope"></i>
+          {% if obj['mailto-text'] %}
+              <a href="mailto:{{obj.email}}">{{obj['mailto-text']}}</a>
+          {% else %}
+            <a href="mailto:{{obj.email}}">{{obj.email}}</a> ({{obj.label}})
+          {% endif %}
       </li>
       {% endfor %} {% endif %} {% if RESUME.basics.phone %}
       <li class="phone">

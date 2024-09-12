@@ -52,12 +52,13 @@ PLUGIN_PATHS = [os.path.expanduser('~/pelican-plugins')]
 PLUGINS = ['i18n_subsites']
 
 ICONS = {
-            "graphql": open('themes/resume/static/images/graphql.svg').read().replace('<svg', '<svg width=45'),
-            "openapi": open('themes/resume/static/images/openapi.svg').read().replace('<svg', '<svg width=45'),
-            "terraform": open('themes/resume/static/images/terraform.svg').read().replace('<svg', '<svg width=45'),
-            "pulumi": open('themes/resume/static/images/pulumi.svg').read().replace('<svg', '<svg width=45'),
-            "open-source": open('themes/resume/static/images/open-source.svg').read().replace('<svg', '<svg width=45')
-        }
+    "graphql": open('themes/resume/static/images/graphql.svg').read().replace('<svg', '<svg height=45'),
+    "openapi": open('themes/resume/static/images/openapi.svg').read().replace('<svg', '<svg height=45'),
+    "terraform": open('themes/resume/static/images/terraform.svg').read().replace('<svg', '<svg height=45'),
+    "pulumi": open('themes/resume/static/images/pulumi.svg').read().replace('<svg', '<svg height=45'),
+    "linux": open('themes/resume/static/images/linux.svg').read().replace('<svg', '<svg height=45'),
+    "open-source": open('themes/resume/static/images/open-source.svg').read().replace('<svg', '<svg height=45')
+}
 
 
 def get_data(lang):
@@ -69,16 +70,12 @@ def get_data(lang):
             _emails = []
             for e in resume['basics']['x-emails']:
                 if isinstance(e, dict):
-                    _emails.append({ **e, "email": obfuscate_string(e['email']) })
+                    _emails.append({**e, "email": obfuscate_string(e['email'])})
                 else:
                     _emails.append(obfuscate_string(e))
             resume['basics']['x-emails'] = _emails
         resume['basics']['phone'] = obfuscate_string(resume['basics']['phone'])
-        def get_wordmark(w):
-            if w in ['javascript', 'd3js', 'linux', 'php', 'flutter']:
-                return False
-            
-            return True
+
         for key in 'work', 'projects', 'skills':
             kc = f"{key}_by_category"
             resume[kc] = {}

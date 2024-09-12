@@ -8,18 +8,22 @@
     {% for skill in RESUME.skills %}
     <div class="item">
       <div class="upper-row">
-        <h4>
-          {% if skill["x-stack"] %} {% for stack in skill["x-stack"] %} {{
-          stack.icon }} {% endfor %} {% endif %} {{ skill['name' ]}}
-        </h4>
+
+      {{ skill['name' ]}}
       </div>
+        <div class="stack">
+          {% if skill["x-stack"] %}
+              {% for stack in skill["x-stack"] %} {{ stack.icon }}
+              {% endfor %}
+          {% endif %}
+        </div>
       <p>{{skill['level']}}</p>
       <p>{{skill['x-details']}}</p>
         <p >
-                    {% for keyword in skill['keywords'] %}
-                        <span class="pill">{{ keyword }}</span>
-                    {% endfor %}
-                </p>
+        {% for keyword in skill['keywords'] %}
+            <span class="pill">{{ keyword }}</span>
+        {% endfor %}
+        </p>
         </div>
     <!--//item-->
     {% endfor %}

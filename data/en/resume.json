@@ -4,12 +4,22 @@
     "picture": "https://avatars2.githubusercontent.com/u/758517?v=4",
     "label": "",
     "headline": "Full-Stack Devops",
-    "summary": "Multi-faceted Engineer, from the electrons to the Cloud <br><i class=\"fa fa-heart\"></i> building projects, and helping others build their projects",
+    "summary": "Multi-faceted Engineer, <br><i class=\"fa fa-heart\"></i> building projects, and helping others build their projects",
     "website": null,
     "blog": null,
     "yearsOfExperience": null,
     "id": "f4f1b8b0-a0d1-4de4-8d20-35cb012e53b2",
-    "x-emails": ["matthieu@whisbee.eu"],
+    "x-emails": [
+      {
+        "email": "cheery.home4271@fastmail.com",
+        "mailto-text": "perso",
+        "label": "perso"
+      },
+      {
+        "email": "matthieu@whisbee.eu",
+        "label": "pro"
+      }
+    ],
     "region": "RENNES",
     "location": {
       "city": "Rennes",
@@ -32,11 +42,28 @@
   "skills": [
     {
       "x-stack": [
+        "linux",
+        "Docker",
+        "Ansible",
+        "Terraform",
+        "CI/CD",
+        "Kubernetes",
+        "pulumi"
+      ],
+      "name": "Sysadmin Linux & devops",
+      "level": "Advanced",
+      "rating": 4,
+      "yearsOfExperience": 10,
+      "keywords": [],
+      "x-details": "Maintained multiple servers, personal & work, heavily using Docker containers, using IaC (terraform, pulumi), Kubernetes, Ansible"
+    },
+    {
+      "x-stack": [
         "python"
       ],
       "name": "Python",
       "level": "Advanced",
-      "rating": 5,
+      "rating": 4,
       "yearsOfExperience": 10,
       "keywords": [],
       "x-details": "creating CLI-tools, backend APIs, one-off scripts, scraping, etc..."
@@ -53,17 +80,26 @@
       "x-details": "Modified & maintained Vue.js, React.js sites. Modified, maintained & created node.js APIs"
     },
     {
-      "x-stack": [
-        "linux"
-      ],
-      "name": "Sysadmin & devops",
-      "level": "Advanced",
-      "rating": 4,
-      "yearsOfExperience": 8,
+      "name": "PHP",
+      "level": "Familier",
+      "rating": 2,
+      "yearsOfExperience": 4,
       "keywords": [
-        "Ansible", "Terraform", "OpenStack", "Vmware"
+        "Laravel",
+        "Symfony"
       ],
-      "x-details": "Maintained multiple servers, personal & work, heavily using Docker containers, using IaC (terraform, pulumi) & Kubernetes"
+      "x-details": "OOP PHP (Laravel & Symfony), old-scool PHP (wordpress & OAR scheduler)"
+    },
+    {
+      "name": "SQL",
+      "level": "Avancé",
+      "rating": 4,
+      "yearsOfExperience": 5,
+      "keywords": [
+        "SQLite",
+        "PostgreSQL",
+        "MySQL"
+      ]
     }
   ],
   "projects": [
@@ -130,6 +166,40 @@
     }
   },
   "work": [
+    {
+      "x-category": "freelance",
+      "position": "Devops RIE",
+      "website": "",
+      "location": "RENNES",
+      "summary": "",
+      "startDate": "2022-06",
+      "endDate": "2024-10",
+      "highlights": [],
+      "x-stack": [
+        "Python",
+        "Ansible",
+        "Docker",
+        "docker-compose",
+        "Go",
+        "PHP",
+        "DevSecOps"
+      ]
+    },
+    {
+      "x-category": "freelance",
+      "position": "Vmware Hosted Private Cloud developer",
+      "website": "",
+      "location": "RENNES",
+      "summary": "Developing, testing, perl scripts that deploy, update, private clouds for OVHCloud Vmware offering",
+      "startDate": "2022-02",
+      "endDate": "2022-06",
+      "highlights": [],
+      "x-stack": [
+        "Perl",
+        "Vmware",
+        "Docker"
+      ]
+    },
     {
       "x-category": "freelance",
       "company": "Legitbee",
