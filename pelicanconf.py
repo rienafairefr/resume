@@ -62,7 +62,10 @@ ICONS = {
 
 
 def get_data(lang):
-    with open(os.path.join('data', lang, 'resume.json'), 'r') as resume_file:
+    resume_ = os.path.join('data', lang, 'resume.json')
+    if not os.path.exists(resume_):
+        return {}
+    with open(resume_, 'r') as resume_file:
         resume = json.load(resume_file)
         if 'email' in resume['basics']:
             resume['basics']['email'] = obfuscate_string(resume['basics']['email'])

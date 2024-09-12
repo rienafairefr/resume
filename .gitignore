@@ -10,3 +10,5 @@ output
 infos\.tex
 .history
 node_modules
+data/en/resume.json
+data/fr/resume.json
