@@ -15,6 +15,7 @@
       {
         "email": "cheery.home4271@fastmail.com",
         "mailto-text": "perso",
+        "x-print-mailto": "matthieu.berthome@fastmail.com",
         "label": "perso"
       },
       {
@@ -110,7 +111,7 @@
       "name": "pynynab",
       "displayName": "pynYNAB",
       "en_summary": "a python client for the new YNAB",
-      "fr_summary": "client Pthon client pour YNAB (www.youneedabudget.com)",
+      "fr_summary": "client Python pour YNAB (www.youneedabudget.com)",
       "website": "",
       "githubUrl": "https://github.com/rienafairefr/pynYNAB",
       "primaryLanguage": "JavaScript",
@@ -127,7 +128,7 @@
       "en_summary": "Open-source contributions along the years",
       "fr_highlights": [
         "OpenAPI Generator, ex. génération de clients API à partir d'une spec OpenAPI",
-        "Movinyl, pour générer des images type 'vinyl' à partir d'une vidéo",
+        "Movinyl, pour générer des images type 'vinyle' à partir d'une vidéo",
         "TardisBank, pour manager l'argent de poche d'enfants"
       ],
       "en_highlights": [
@@ -163,8 +164,6 @@
       ]
     }
   ],
-
-
   "x-categories": {
     "freelance": {
       "fr_description": "en tant que freelance",
@@ -193,7 +192,7 @@
       "en_summary": "",
       "fr_summary": "Expertise devops du SI du RIE, le Réseau Interministériel de l'Etat, au service de 15000 sites à travers la France",
       "startDate": "2022-06",
-      "endDate": "2024-10",
+      "endDate": "",
       "fr_highlights": [
         "Développement d'applicatifs ETL",
         "Mise en place de plateforme applicative interne",
@@ -219,11 +218,11 @@
     {
       "x-category": "freelance",
       "en_position": "VMware Hosted Private Cloud developer",
-      "fr_position": "Développeur au sein de l'équipe VMware/Hosted Private Cloud",
+      "fr_position": "Développeur VMware",
       "website": "",
       "location": "RENNES",
       "en_summary": "Developing, testing, perl scripts that deploy, update, private clouds for OVHCloud VMware offering",
-      "fr_summary": "Ecriture, Evolution, de scripts perl pour déployer, mettre à jour, des infrastructures VMware dans le produit private cloud de OVHCloud",
+      "fr_summary": "Ecriture, Evolution, de scripts perl pour déployer, mettre à jour, des infrastructures VMware dans le produit Hosted Private Cloud de OVHCloud",
       "startDate": "2022-02",
       "endDate": "2022-06",
       "fr_highlights": [
@@ -244,7 +243,7 @@
       "website": "www.legitbee.com",
       "location": "LILLE",
       "en_summary": "CTO interim",
-      "fr_summary": "head-of-tech/CTO par intérim",
+      "fr_summary": "CTO par intérim",
       "startDate": "2021-09",
       "endDate": "2021-12",
       "highlights": [
@@ -349,11 +348,11 @@
     {
       "x-category": "freelance",
       "en_position": "Instructor in Electronics & laser cutting",
-      "fr_position": "Formateur Electronique & découpe laser",
+      "fr_position": "Formateur",
       "website": "",
       "location": "LILLE",
-      "en_summary": "Course development, instruction of small groups in the manipulation & beecoming independent ",
-      "fr_summary": "Ecriture de cours, formation en petits groupes sur la manipulation et devenir indépendant sur les équipements",
+      "en_summary": "Electronics and lasercutting. Course development, instruction of small groups in the manipulation & beecoming independent ",
+      "fr_summary": "Electronique & découpe laser. Ecriture de cours, formation en petits groupes sur la manipulation et devenir indépendant sur les équipements",
       "startDate": "2017-06",
       "endDate": "2020-06",
       "fr_highlights": [

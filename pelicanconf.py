@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
-from __future__ import unicode_literals
 
 import json
 import os
@@ -48,8 +47,8 @@ DEBUG = False
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
 
-PLUGIN_PATHS = [os.path.expanduser('~/pelican-plugins')]
-PLUGINS = ['i18n_subsites']
+PLUGIN_PATHS = [os.path.expanduser('~/open-source/pelican-plugins')]
+PLUGINS = ['i18n_subsites', 'pdf']
 
 ICONS = {
     "graphql": open('themes/resume/static/images/graphql.svg').read(),
@@ -60,7 +59,8 @@ ICONS = {
     "linux": open('themes/resume/static/images/linux.svg').read(),
     "open-source": open('themes/resume/static/images/open-source.svg').read()
 }
-
+PDF_STYLE = ""
+PDF_STYLE_PATH = ""
 
 def get_icon(name, width=None, height=None):
     icon = ICONS.get(name)

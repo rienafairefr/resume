@@ -360,9 +360,6 @@ used for profile image
     content: none !important;
   }
 
-  html body a.float.btn {
-    display: none;
-  }
 
   .wrapper {
     width: 100%;
